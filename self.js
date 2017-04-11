@@ -3,6 +3,7 @@ let bot = new Discord.Client();
 let config = require('./config.json');
 var randomcolor = require('randomcolor')
 var moment = require('moment')
+var winston = require('winston')
 var util = require('util')
 
 process.on('uncaughtException', function(err) {
