@@ -15,7 +15,7 @@ function AaN(args, i) {
 }
 
 bot.once('ready', () => {
-	let games = [`with my love Leah`, `I love you Leah`, `with Leah <3`, `Leah is my love`,];
+	let games = [`with Coding`, `I love JavaScript`, `with Chris`, `xd`,];
       setInterval(() => {
         bot.user.setGame(games[Math.floor(Math.random() * games.length)])
 		console.log('Shut up I am fucking ready!');
