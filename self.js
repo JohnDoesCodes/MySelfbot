@@ -227,7 +227,7 @@ msg.channel.sendMessage(response[~~(Math.random() * response.length)])
 
                     author: {
 
-                        name: `${fm.author.username} (${fm.author.discriminator})`,
+                        name: `${fm.author.username}#${fm.author.discriminator}`,
 
                         icon_url: fm.author.avatarURL
 
