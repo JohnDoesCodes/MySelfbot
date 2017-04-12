@@ -143,10 +143,10 @@ if (!msg.guild || !msg.member) return;
         var embed = new Discord.RichEmbed();
         embed.setColor("#0099FF")
             .setFooter(' ', ' ')
-            .setThumbnail(`${client.user.avatarURL}`)
+            .setThumbnail(`${bot.user.avatarURL}`)
             .setTimestamp()
-            .addField('> Uptime', (Math.round(client.uptime / (1000 * 60 * 60))) + " hours, " + (Math.round(client.uptime / (1000 * 60)) % 60) + " minutes, and " + (Math.round(client.uptime / 1000) % 60) + " seconds")
-            .addField('> General Stats', `• Servers: ${client.guilds.size}\n• Channels: ${client.channels.size}\n• Users: ${client.users.size}`, true)
+            .addField('> Uptime', (Math.round(bot.uptime / (1000 * 60 * 60))) + " hours, " + (Math.round(bot.uptime / (1000 * 60)) % 60) + " minutes, and " + (Math.round(bot.uptime / 1000) % 60) + " seconds")
+            .addField('> General Stats', `• Servers: ${bot.guilds.size}\n• Channels: ${bot.channels.size}\n• Users: ${bot.users.size}`, true)
             .addField('> Working on', `• New Pando\'s commands, click this [Link to join](https://discord.gg/dfdvArY)`)
             .addField('> Update', '• Added learnjs command')
         msg.channel.sendEmbed(
