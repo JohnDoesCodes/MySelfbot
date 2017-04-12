@@ -244,7 +244,7 @@ msg.channel.sendMessage(response[~~(Math.random() * response.length)])
 
     }
 
-    var winston = require('winston');
+ //   var winston = require('winston');
   var util = require('util')
 if (command === "eval") {
         let suffix = msg.content.slice(6);
