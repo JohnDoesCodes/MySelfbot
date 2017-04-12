@@ -4,7 +4,7 @@ let config = require('./config.json');
 var randomcolor = require('randomcolor')
 var moment = require('moment')
 var util = require('util')
-
+var winston = require('winston')
 
 process.on('uncaughtException', function(err) {
     console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE BOT FROM CRASHING
@@ -244,7 +244,7 @@ msg.channel.sendMessage(response[~~(Math.random() * response.length)])
 
     }
 
- //   var winston = require('winston');
+  var winston = require('winston')
   var util = require('util')
 if (command === "eval") {
         let suffix = msg.content.slice(6);
