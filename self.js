@@ -22,7 +22,7 @@ bot.once('ready', () => {
 }, 12000)
 });
 
-const prefix = "$!"
+const prefix = "self"
 
 bot.on('message', msg => {
   if (msg.author.id !== bot.user.id) return; //Only allows you to work with it, since it's called a selfbot :P
@@ -39,33 +39,33 @@ if (!msg.guild || !msg.member) return;
    msg.channel.sendMessage(
    '```asciidoc' +
    '\n= Self Bot Commands =' +
-   '\n$!ping         :: $!ping will be responed by pong and ms' +
-   '\n$!learnjs      :: $!learnjs show\'s the how usefull links on leaning js' +
-   '\n$!links        :: $!links show\'s my social media of John site and server' +
-   '\n$!servers      :: $!servers show\'s the Verified Server\'s or the partnered server' +
-   '\n$!prune        :: $!prune used to clear anywhere to 1-100 messages' +
-   '\n$!uptime       :: $!uptime shows the uptime of the selfbot' +
-   '\n$!reset        :: $!reset used to reset the selfbot' +
-   '\n$!stats        :: $!stats used to show the selfbot stats' +
-   '\n$!friend       :: $!friend <@user>  used to add friend' +
-   '\n$!unfriend     :: $!unfriend <@user>  used to unfriend' +
-   '\n$!block        :: $!block <@user>  used to block' +
-   '\n$!unblock      :: $!unblock <@user>  used to unblock' +
-   '\n$!quote        :: $!quote <message ID> used to quote message' +
-   '\n$!userinfo     :: $!userinfo used to show user\'s info' +
-   '\n$!whois        :: $!whois <@user> used to show user\'s info' +
-   '\n$!serverinfo   :: $!serverinfo used to show server\'s info' +
-   '\n$!embed        :: $!embed used for text embed <Bench role require>' +
-   '\n$!softban      :: $!softban <@user>  <reason required> used to softban user\'s' +
-   '\n$!warn         :: $!warn <@user> <reason required> used to warn people' +
-   '\n$!ban          :: $!ban <@user>  <reason required> used to ban users' +
-   '\n$!unban        :: $!unban <@user> <reason required> used to unban users' +
-   '\n$!kick         :: $!kick <@user>  <reason required> used to kick users' +
-   '\n$!avi          :: $!avi used to show your avatar' +
-   '\n$!get          :: $!get <@user> used to get user\'s avatar' +
-   '\n$!cb           :: $!cb dont feel like explaining this one' +
-   '\n$!reload       :: $!reload used to reload the bot by Developer (Owner)' +
-   '\n$!eval         :: $!eval used for Owner only```'
+   '\nselfping         :: selfping will be responed by pong and ms' +
+   '\nselflearnjs      :: selflearnjs show\'s the how usefull links on leaning js' +
+   '\nselflinks        :: selflinks show\'s my social media of John site and server' +
+   '\nselfservers      :: selfservers show\'s the Verified Server\'s or the partnered server' +
+   '\nselfprune        :: selfprune used to clear anywhere to 1-100 messages' +
+   '\nselfuptime       :: selfuptime shows the uptime of the selfbot' +
+   '\nselfreset        :: selfreset used to reset the selfbot' +
+   '\nselfstats        :: selfstats used to show the selfbot stats' +
+   '\nselffriend       :: selffriend <@user>  used to add friend' +
+   '\nselfunfriend     :: selfunfriend <@user>  used to unfriend' +
+   '\nselfblock        :: selfblock <@user>  used to block' +
+   '\nselfunblock      :: selfunblock <@user>  used to unblock' +
+   '\nselfquote        :: selfquote <message ID> used to quote message' +
+   '\nselfuserinfo     :: selfuserinfo used to show user\'s info' +
+   '\nselfwhois        :: selfwhois <@user> used to show user\'s info' +
+   '\nselfserverinfo   :: selfserverinfo used to show server\'s info' +
+   '\nselfembed        :: selfembed used for text embed <Bench role require>' +
+   '\nselfsoftban      :: selfsoftban <@user>  <reason required> used to softban user\'s' +
+   '\nselfwarn         :: selfwarn <@user> <reason required> used to warn people' +
+   '\nselfban          :: selfban <@user>  <reason required> used to ban users' +
+   '\nselfunban        :: selfunban <@user> <reason required> used to unban users' +
+   '\nselfkick         :: selfkick <@user>  <reason required> used to kick users' +
+   '\nselfavi          :: selfavi used to show your avatar' +
+   '\nselfget          :: selfget <@user> used to get user\'s avatar' +
+   '\nselfcb           :: selfcb dont feel like explaining this one' +
+   '\nselfreload       :: selfreload used to reload the bot by Developer (Owner)' +
+   '\nselfeval         :: selfeval used for Owner only```'
    );
 }
 
