@@ -244,7 +244,7 @@ msg.channel.sendMessage(response[~~(Math.random() * response.length)])
 
     }
 
-if (command === "eval") {
+    if (command === "eval") {
         let suffix = msg.content.slice(6);
 
         try {
@@ -291,6 +291,14 @@ if (command === "eval") {
             tosend.push('\`\`\`');
             msg.edit(tosend.join('\n'));
             winston.log('info', `Error: ${tosend.join('\n')}`);
+        }
+    }
+
+    function clean(text) {
+        if (typeof(text) === "string") {
+            return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+        } else {
+            return text;
         }
     }
   if (msg.content.startsWith(prefix + "userinfo")) {
