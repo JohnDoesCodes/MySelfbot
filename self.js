@@ -243,65 +243,65 @@ msg.channel.sendMessage(response[~~(Math.random() * response.length)])
 
     }
 
-  //var winston = require('winston')
-  //var util = require('util')
-//if (command === "eval") {
-      //  let suffix = msg.content.slice(6);
+  var winston = require('winston')
+  var util = require('util')
+if (command === "eval") {
+       let suffix = msg.content.slice(6);
 
-        //try {
-      //      let evaled = eval(suffix);
-    //        let type = typeof evaled;
-  //          let insp = util.inspect(evaled, {
-//                depth: 0
-          //  });
-        //    let tosend = [];
+        try {
+           let evaled = eval(suffix);
+           let type = typeof evaled;
+           let insp = util.inspect(evaled, {
+               depth: 0
+           });
+           let tosend = [];
 
-      //      if (evaled === null) evaled = 'null';
+           if (evaled === null) evaled = 'null';
 
-    //        if (evaled.toString().includes(bot.token) ||
-  //              insp.toString().includes(bot.token)) return msg.edit('Cannot complete eval due to token.');
+           if (evaled.toString().includes(bot.token) ||
+               insp.toString().includes(bot.token)) return msg.edit('Cannot complete eval due to token.');
 
-//            tosend.push('**EVAL:**');
-            //tosend.push('\`\`\`js');
-          //  tosend.push(clean(suffix));
-        //    tosend.push('\`\`\`');
-      //      tosend.push('**Evaluates to:**');
-    //        tosend.push('\`\`\`js');
-  //          tosend.push(clean(evaled));
-//            tosend.push('\`\`\`');
-            //if (evaled instanceof Object) {
-          //      tosend.push('**Inspect:**');
-        //        tosend.push('\`\`\`js');
-      //          tosend.push(insp);
-    //            tosend.push('\`\`\`');
-  //          } else {
-//                tosend.push('**Type:**');
-               // tosend.push('\`\`\`js');
-             //   tosend.push(type);
-           //     tosend.push('\`\`\`');
-         //   }
-       //     msg.edit(tosend.join('\n'));
-     //       winston.log('info', `Evaluated ${tosend.join('\n')}`);
-   //     } catch (err) {
- //           let tosend = [];
-           // tosend.push('**EVAL:** \`\`\`js');
-         //   tosend.push(clean(suffix));
-       //     tosend.push('\`\`\`');
-     //       tosend.push('**Error:** \`\`\`js');
-   //         tosend.push(clean(err.stack));
-            //tosend.push('\`\`\`');
-          //  msg.edit(tosend.join('\n'));
-        //    winston.log('info', `Error: ${tosend.join('\n')}`);
-      //  }
-    //}
+           tosend.push('**EVAL:**');
+            tosend.push('\`\`\`js');
+           tosend.push(clean(suffix));
+           tosend.push('\`\`\`');
+           tosend.push('**Evaluates to:**');
+           tosend.push('\`\`\`js');
+           tosend.push(clean(evaled));
+           tosend.push('\`\`\`');
+            if (evaled instanceof Object) {
+               tosend.push('**Inspect:**');
+               tosend.push('\`\`\`js');
+               tosend.push(insp);
+               tosend.push('\`\`\`');
+           } else {
+               tosend.push('**Type:**');
+               tosend.push('\`\`\`js');
+               tosend.push(type);
+               tosend.push('\`\`\`');
+           }
+           msg.edit(tosend.join('\n'));
+           winston.log('info', `Evaluated ${tosend.join('\n')}`);
+       } catch (err) {
+           let tosend = [];
+           tosend.push('**EVAL:** \`\`\`js');
+           tosend.push(clean(suffix));
+           tosend.push('\`\`\`');
+           tosend.push('**Error:** \`\`\`js');
+           tosend.push(clean(err.stack));
+            tosend.push('\`\`\`');
+           msg.edit(tosend.join('\n'));
+           winston.log('info', `Error: ${tosend.join('\n')}`);
+       }
+    }
 
-  //  function clean(text) {
-        //if (typeof(text) === "string") {
-          //  return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-        //} else {
-        //    return text;
-      //  }
-    //}
+   function clean(text) {
+        if (typeof(text) === "string") {
+           return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+        } else {
+           return text;
+       }
+    }
 
   if (msg.content.startsWith(prefix + "userinfo")) {
     var embed = new Discord.RichEmbed();
