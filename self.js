@@ -301,6 +301,7 @@ msg.channel.sendMessage(response[~~(Math.random() * response.length)])
             return text;
         }
     }
+
   if (msg.content.startsWith(prefix + "userinfo")) {
     var embed = new Discord.RichEmbed();
     var moment = require('moment')
