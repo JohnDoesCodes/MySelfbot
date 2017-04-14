@@ -263,21 +263,21 @@ if (command === "eval") {
                insp.toString().includes(bot.token)) return msg.edit('Cannot complete eval due to token.');
 
            tosend.push('**EVAL:**');
-            tosend.push('\`\`\`js');
+            tosend.push('\`\`\`xl');
            tosend.push(clean(suffix));
            tosend.push('\`\`\`');
            tosend.push('**Evaluates to:**');
-           tosend.push('\`\`\`js');
+           tosend.push('\`\`\`xl');
            tosend.push(clean(evaled));
            tosend.push('\`\`\`');
             if (evaled instanceof Object) {
                tosend.push('**Inspect:**');
-               tosend.push('\`\`\`js');
+               tosend.push('\`\`\`xl');
                tosend.push(insp);
                tosend.push('\`\`\`');
            } else {
                tosend.push('**Type:**');
-               tosend.push('\`\`\`js');
+               tosend.push('\`\`\`xl');
                tosend.push(type);
                tosend.push('\`\`\`');
            }
@@ -285,10 +285,10 @@ if (command === "eval") {
            winston.log('info', `Evaluated ${tosend.join('\n')}`);
        } catch (err) {
            let tosend = [];
-           tosend.push('**EVAL:** \`\`\`js');
+           tosend.push('**EVAL:** \`\`\`xl');
            tosend.push(clean(suffix));
            tosend.push('\`\`\`');
-           tosend.push('**Error:** \`\`\`js');
+           tosend.push('**Error:** \`\`\`xl');
            tosend.push(clean(err.stack));
             tosend.push('\`\`\`');
            msg.edit(tosend.join('\n'));
