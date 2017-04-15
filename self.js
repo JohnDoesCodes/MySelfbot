@@ -464,6 +464,9 @@ if (command == "warn") {
          var reason = msg.content.split(' ').slice(2).join(' ');
          if (!user) return msg.channel.sendMessage('Please include a user to ban.');
          if (!reason) return msg.channel.sendMessage('Please include a reason.');
+         if (!msg.guild.member(bot.user).hasPermission("BAN_MEMBERS")) {
+            return msg.channel.send("`ERROR:` I do not have permission to ban.");
+        }
          member.ban().then(() => {
                  var embed = new Discord.RichEmbed();
                  embed.setAuthor(`Banned`, ` `)
