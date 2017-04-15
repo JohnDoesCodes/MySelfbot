@@ -53,9 +53,9 @@ if (!msg.guild || !msg.member) return;
    '\nselfblock        :: selfblock <@user>  used to block' +
    '\nselfunblock      :: selfunblock <@user>  used to unblock' +
    '\nselfquote        :: selfquote <message ID> used to quote message' +
-   '\nselfuserinfo     :: selfuserinfo used to show user\'s info' +
-   '\nselfwhois        :: selfwhois <@user> used to show user\'s info' +
-   '\nselfserverinfo   :: selfserverinfo used to show server\'s info' +
+   '\nselfu            :: selfu used to show user\'s info' +
+   '\nselfw            :: selfw <@user> used to show user\'s info' +
+   '\nselfsi           :: selfsi used to show server\'s info' +
    '\nselfembed        :: selfembed used for text embed <Bench role require>' +
    '\nselfsoftban      :: selfsoftban <@user>  <reason required> used to softban user\'s' +
    '\nselfwarn         :: selfwarn <@user> <reason required> used to warn people' +
@@ -302,7 +302,7 @@ msg.channel.sendMessage(response[~~(Math.random() * response.length)])
     //     }
     // }
 
-  if (msg.content.startsWith(prefix + "userinfo")) {
+  if (msg.content.startsWith(prefix + "u")) {
     var embed = new Discord.RichEmbed();
     var moment = require('moment')
     embed.addField("> Member Details", `• Name: ${msg.author.username}\n• Discrim: #${msg.author.discriminator}\n• ID: ${msg.author.id}\n• Roles: ${msg.member.roles.filter(r => {return r.name != '@everyone'}).map(r => r.name).join(', ')}\n• Joined at: ${moment(msg.joinedAt).format('ddd MMM Do YYYY')}`, true)
@@ -318,7 +318,7 @@ msg.channel.sendMessage(response[~~(Math.random() * response.length)])
   );
   }
 	
-  if (msg.content.startsWith(prefix + "whois")) {
+  if (msg.content.startsWith(prefix + "w")) {
       var mention = msg.mentions.users.first();
       if(msg.mentions.users.size === 0) {
         return msg.channel.sendMessage("\`?\` | Please mention a user.")
@@ -339,7 +339,7 @@ msg.channel.sendEmbed(
 }
 
 
-  if (msg.content.startsWith(prefix + `serverinfo`)) {
+  if (msg.content.startsWith(prefix + `si`)) {
     var embed = new Discord.RichEmbed();
     var moment = require('moment')
     embed.addField("> Server Info", `• Server name: ${msg.guild.name}\n• Server ID: ${msg.guild.id}\n• Owner: ${msg.guild.owner.user.username}\n• Owner ID: ${msg.guild.owner.id}\n• ${msg.guild.memberCount} Members`, true)
@@ -356,7 +356,7 @@ msg.channel.sendEmbed(
     );
   }
   
-if (msg.content.toLowerCase().startsWith(prefix + "softban")) {
+if (msg.content.toLowerCase().startsWith(prefix + "sb")) {
         var firstMention = msg.guild.member(msg.mentions.users.first());
         if (msg.mentions.users.size === 0) {
                 return msg.reply("Mention a user to softban.");
