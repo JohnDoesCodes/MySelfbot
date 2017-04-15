@@ -16,7 +16,7 @@ function AaN(args, i) {
 }
 
 bot.once('ready', () => {
-	let games = [`https://www.twitch.tv/twitch`];
+	let games = [`with Coding`, `I love JavaScript`, `with Chris`, `xd`,];
       setInterval(() => {
         bot.user.setGame(games[Math.floor(Math.random() * games.length)])
 		console.log('Shut up I am fucking ready!');
