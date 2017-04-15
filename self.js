@@ -497,8 +497,8 @@ if (command == "warn") {
          if (!user) return msg.channel.sendMessage('Please include a user to kick.');
          if (!reason) return msg.channel.sendMessage('Please include a reason.');
          if (!msg.guild.member(bot.user).hasPermission("KICK_MEMBERS")) {
-               return msg.channel.send("`ERROR:` I do not have permission to kick.");
-           }
+            return msg.channel.send("`ERROR:` I do not have permission to kick.");
+        }
          member.kick().then(() => {
                  var embed = new Discord.RichEmbed();
                  embed.setAuthor(`Kicked`, ` `)
