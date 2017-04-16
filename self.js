@@ -41,6 +41,7 @@ if (!msg.guild || !msg.member) return;
    '```asciidoc' +
    '\n= Self Bot Commands =' +
    '\nselfping         :: selfping will be responed by pong and ms' +
+   '\nselfvac          :: selfvac vacation xD' +
    '\nselflearnjs      :: selflearnjs show\'s the how usefull links on leaning js' +
    '\nselflinks        :: selflinks show\'s my social media of John site and server' +
    '\nselfservers      :: selfservers show\'s the Verified Server\'s or the partnered server' +
