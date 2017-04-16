@@ -404,7 +404,7 @@ if (msg.content.toLowerCase().startsWith(prefix + "sb")) {
         var member = msg.guild.member;
         var reason = msg.content.split(' ').slice(2).join(' ');
         if (!msg.guild.member(bot.user).hasPermission("BAN_MEMBERS")) {
-            return msg.channel.send("`ERROR:` I do not have permission to ban.");
+            return msg.channel.send("`ERROR:` I do not have permission to unban.");
         }
         msg.guild.fetchBans().then(users => {
             if (isNaN(msg.content.split(" ")[1])) {
@@ -415,16 +415,16 @@ if (msg.content.toLowerCase().startsWith(prefix + "sb")) {
             msg.guild.unban(user);
             msg.user.sendMessage(`You have been unbanned from ${msg.guild.name}`)
             msg.channel.sendMessage(`${user} has been unbanned from the guild! :ok_hand::skin-tone-4:`)
-            var embed = new Discord.RichEmbed();
-            embed.addField(`Moderator`, `${msg.author.username}`, true)
-                .setColor(0xFFF00)
-                .setTimestamp()
-                .addField('User Unbanned', `${user}`, true)
-            msg.guild.channels.find('name', 'mod-log').sendEmbed(
-                embed, {
-                    disableEveryone: true
-                }
-            );
+            // var embed = new Discord.RichEmbed();
+            // embed.addField(`Moderator`, `${msg.author.username}`, true)
+            //     .setColor(0xFFF00)
+            //     .setTimestamp()
+            //     .addField('User Unbanned', `${user}`, true)
+            // msg.guild.channels.find('name', 'mod-log').sendEmbed(
+            //     embed, {
+            //         disableEveryone: true
+            //     }
+            // );
         });
     }
 
