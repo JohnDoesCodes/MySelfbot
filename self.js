@@ -578,7 +578,7 @@ if (msg.content.toLowerCase().startsWith(prefix + "learnjs")) {
 if (msg.content.toLowerCase().startsWith(prefix + "servers")) {
     msg.author.sendMessage("Here are the Verified Server\'s!")
     var embed = new Discord.RichEmbed();
-    embed.addField('Server\'s', '- Pando\'s Hangout is where the support server for Pando https://discord.gg/R4AXuBM\n- Critical Ops Clans is a gaming Community https://discord.gg/8aKgYJx\n- Panda\'s Hangout is the server where JayBot made https://discord.gg/R4AXuBM\n- SUPR3M3 Official is the server a clan on Critical Ops https://discord.gg/FdudkNN')
+    embed.addField('Server\'s', '- Pando\'s Hangout is where the support server for Pando https://discord.gg/dfdvArY\n- Critical Ops Clans is a gaming Community https://discord.gg/8aKgYJx\n- Panda\'s Hangout is the server where JayBot made https://discord.gg/R4AXuBM\n- SUPR3M3 Official is the server a clan on Critical Ops https://discord.gg/FdudkNN')
     .setColor("#0099FF")
     msg.channel.sendEmbed(
 
