@@ -185,7 +185,7 @@ if (!msg.guild || !msg.member) return;
         if (!msg.mentions.users.first()) return msg.edit('**Unblock** > Failed, no user.');
 
         msg.mentions.users.first().unblock().then(() => {
-            msg.edit("**Person** > Blocked");
+            msg.edit("**Person** > Unblocked");
         })
     }
 
