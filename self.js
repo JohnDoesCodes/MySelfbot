@@ -53,7 +53,7 @@ if (!msg.guild || !msg.member) return;
    '\nselfblock        :: selfblock <@user>  used to block' +
    '\nselfunblock      :: selfunblock <@user>  used to unblock' +
    '\nselfquote        :: selfquote <message ID> used to quote message' +
-   '\nselfu            :: selfu used to show user\'s info' +
+   '\nselfinfo         :: selfinfo used to show user\'s info' +
    '\nselfw            :: selfw <@user> used to show user\'s info' +
    '\nselfsi           :: selfsi used to show server\'s info' +
    '\nselfembed        :: selfembed used for text embed <Bench role require>' +
@@ -302,7 +302,7 @@ msg.channel.sendMessage(response[~~(Math.random() * response.length)])
     //     }
     // }
 
-  if (msg.content.startsWith(prefix + "u")) {
+  if (msg.content.startsWith(prefix + "info")) {
     var embed = new Discord.RichEmbed();
     var moment = require('moment')
     embed.addField("> Member Details", `• Name: ${msg.author.username}\n• Discrim: #${msg.author.discriminator}\n• ID: ${msg.author.id}\n• Roles: ${msg.member.roles.filter(r => {return r.name != '@everyone'}).map(r => r.name).join(', ')}\n• Joined at: ${moment(msg.joinedAt).format('ddd MMM Do YYYY')}`, true)
