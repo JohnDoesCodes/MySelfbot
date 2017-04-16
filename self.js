@@ -591,6 +591,42 @@ if (msg.content.toLowerCase().startsWith(prefix + "servers")) {
         );
 }
 	
+	if (msg.content.startsWith(prefix + "vac")) {
+		msg.channel.sendMessage("**Vac**ation"),
+msg.edit("===========================  :red_car: "),
+msg.edit("==========================  :red_car: "),
+msg.edit("=========================  :red_car: "),
+msg.edit("========================  :red_car: "),
+msg.edit("======================  :red_car: "),
+msg.edit("=====================  :red_car: "),
+msg.edit(":warning: **Traffic** :warning: "),
+msg.edit("=======================  :red_car: "),
+msg.edit("======================  :red_car: "),
+msg.edit("=====================  :red_car: "),
+msg.edit("====================  :red_car: "),
+msg.edit("===================  :red_car: "),
+msg.edit("==================  :red_car: "),
+msg.edit("=================  :red_car: "),
+msg.edit("================  :red_car: "),
+msg.edit("===============  :red_car: "),
+msg.edit("==============  :red_car: "),
+msg.edit("=============  :red_car: "),
+msg.edit("============  :red_car: "),
+msg.edit("===========  :red_car: "),
+msg.edit("==========  :red_car: "),
+msg.edit("=========  :red_car: "),
+msg.edit("========  :red_car: "),
+msg.edit("=======  :red_car: "),
+msg.edit("======  :red_car: "),
+msg.edit("=====  :red_car: "),
+msg.edit("====  :red_car: "),
+msg.edit("===  :red_car: "),
+msg.edit("==  :red_car: "),
+msg.edit("=  :red_car: "),
+msg.edit(" :red_car: "),
+msg.edit("**Vac**ation over")
+	}
+	
     if (command == 'embed') {
 
         let noto = msg.content.split(" ").slice(1).join(" ");
