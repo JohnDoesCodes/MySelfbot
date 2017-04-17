@@ -403,6 +403,7 @@ if (msg.content.toLowerCase().startsWith(prefix + "sb")) {
     if (msg.content.startsWith(prefix + 'unban')) {
         var user = msg.mentions.users.first()
         var member = msg.guild.member;
+       // var reason = msg.content.split(' ').slice(2).join(' ');
         if (!msg.guild.member(bot.user).hasPermission("BAN_MEMBERS")) {
             return msg.channel.send("`ERROR:` I do not have permission to unban.");
         }
@@ -542,7 +543,7 @@ if (command == "warn") {
     if (!mention) {
      return msg.channel.sendMessage("\`?\` | Mention a user.")
     }
-    msg.reply(mention.avatarURL)
+    msg.channel.sendMessage(mention.avatarURL)
    }
 	
 	if (msg.content.toLowerCase().startsWith(prefix + "links")) {
