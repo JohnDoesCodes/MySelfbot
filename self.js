@@ -414,7 +414,7 @@ if (msg.content.toLowerCase().startsWith(prefix + "sb")) {
                 user = users.get(msg.content.split(" ")[1]);
             }
             msg.guild.unban(user);
-            // msg.user.sendMessage(`You have been unbanned from ${msg.guild.name}`)
+            msg.user.sendMessage(`You have been unbanned from ${msg.guild.name}`)
             msg.channel.sendMessage(`${user.username} has been unbanned from the guild! :ok_hand::skin-tone-4:`)
             // var embed = new Discord.RichEmbed();
             // embed.addField(`Moderator`, `${msg.author.username}`, true)
