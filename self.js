@@ -159,34 +159,35 @@ if (!msg.guild || !msg.member) return;
 }
 
     if (command == "friend") {
-        if (!msg.mentions.users.first()) return msg.edit('**Friend** > Failed, no user.');
-
+        if (!msg.mentions.users.first()) return msg.edit('Failed to send friend request to a cool guy.');
+        msg.delete()
         msg.mentions.users.first().addFriend().then(() => {
-            msg.edit("**Friend** > Done");
+            msg.edit("I just add friend a cool guy xd");
         })
     }
 
     if (command == "unfriend") {
-        if (!msg.mentions.users.first()) return msg.edit('**Friend** > Failed, no user.');
-
+        if (!msg.mentions.users.first()) return msg.edit('Failed to unfriend a bitch, check your deym codes.');
+        msg.delete()
         msg.mentions.users.first().removeFriend().then(() => {
-            msg.edit("**Removed Friend** > Done");
+            msg.edit("About time to remove this bitch from my friends list.");
         })
     }
 
     if (command == "block") {
-        if (!msg.mentions.users.first()) return msg.edit('**Block** > Failed, no user.');
+        msg.delete()
+        if (!msg.mentions.users.first()) return msg.edit('Failed to blocked a bitch, check your codes.');
 
         msg.mentions.users.first().block().then(() => {
-            msg.edit("**Person** > Blocked");
+            msg.edit("Bitch has bee blocked!");
         })
     }
 
     if (command == "unblock") {
-        if (!msg.mentions.users.first()) return msg.edit('**Unblock** > Failed, no user.');
-
+        if (!msg.mentions.users.first()) return msg.edit('Failed to unblocked a user, check you deym codes.');
+        msg.delete()
         msg.mentions.users.first().unblock().then(() => {
-            msg.edit("**Person** > Unblocked");
+            msg.edit("A bitch has been unblocked.");
         })
     }
 
@@ -549,7 +550,7 @@ if (command == "warn") {
 	if (msg.content.toLowerCase().startsWith(prefix + "links")) {
     var embed = new Discord.RichEmbed();
     embed.addField('My Facebook Link', 'This is My Facebook link. Add me on [Facebook](http://www.facebook.com/BenchMigami)')
-    .addField('Where to find Me', 'Here you where you find, just [click here](https://discord.gg/dfdvArY)')
+    .addField('Where to find Me', 'Here you where find, just [click here](https://discord.gg/dfdvArY)')
 	.addField('Another Server to find me', 'Another server you can find me, just [click here](https://discord.gg/8aKgYJx)')
     .setColor("#EEFD3F")
     msg.channel.sendEmbed(
