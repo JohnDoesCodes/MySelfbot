@@ -319,7 +319,7 @@ msg.channel.sendMessage(response[~~(Math.random() * response.length)])
   );
   }
 	
-  if (msg.content.startsWith(prefix + "w")) {
+  if (command == "w") {
       var mention = msg.mentions.users.first();
       if(msg.mentions.users.size === 0) {
         return msg.channel.sendMessage("\`?\` | Please mention a user.")
