@@ -16,7 +16,7 @@ function AaN(args, i) {
 }
 
 bot.once('ready', () => {
-	let games = [`with Coding`, `I love JavaScript`, `with Chris`, `xd`,];
+	let games = [`with Coding`, `I love JavaScript`, `with Chris`, `xd`, `more xd`];
       setInterval(() => {
         bot.user.setGame(games[Math.floor(Math.random() * games.length)])
 		console.log('I am ready!');
