@@ -1,14 +1,14 @@
 let Discord = require("discord.js");
-let client = new Discord.Client();
+let bot = new Discord.Client();
 let config = require('./config.json');
 var randomcolor = require('randomcolor')
 var moment = require('moment')
 var util = require('util')
 var winston = require('winston')
-require('./util/eventLoader')(client);
+require('./util/eventLoader')(Bot);
 
 process.on('uncaughtException', function(err) {
-    console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE client FROM CRASHING
+    console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE bot FROM CRASHING
 });
 
 function AaN(args, i) {
@@ -39,7 +39,7 @@ exports.reload = reload;
 // if (!message.guild || !message.member) return;
 //    message.channel.sendMessage(
 //    '```asciidoc' +
-//    '\n= Self Bot Commands =' +
+//    '\n= Self bot Commands =' +
 //    '\nselfping         :: selfping will be responed by pong and ms' +
 //    '\nselfvac          :: selfvac vacation xD' +
 //    '\nselflearnjs      :: selflearnjs show\'s the how usefull links on leaning js' +
@@ -78,26 +78,26 @@ exports.reload = reload;
 //     }
 
 //     if (command == "afk") {
-//         let nickname = message.guild.member(client.user).nickname;
-//         let username = message.guild.member(client.user).user.username;
+//         let nickname = message.guild.member(bot.user).nickname;
+//         let username = message.guild.member(bot.user).user.username;
 //         if (!nickname) {
-//             message.guild.member(client.user).setNickname(username + ' [is AFK]').then(() => {
+//             message.guild.member(bot.user).setNickname(username + ' [is AFK]').then(() => {
 //                 message.edit('Set to away from keyboard').then(response => response.delete(1000).catch(error => console.log(error.stack)));
 //             }).catch(error => console.log(error.stack));
 //         } else
 
 //         if (nickname.search(' [is AFK]')) {
-//             message.guild.member(client.user).setNickname('').then(() => {
+//             message.guild.member(bot.user).setNickname('').then(() => {
 //                 message.edit('No longer AFK').then(response => response.delete(1000).catch(error => console.log(error.stack)));
 //             }).catch(error => console.log(error.stack));
 //         } else
 
 //         if (nickname && !nickname.includes(' [is AFK]')) {
-//             message.guild.member(client.user).setNickname(nickname + ' [is AFK]').then(() => {
+//             message.guild.member(bot.user).setNickname(nickname + ' [is AFK]').then(() => {
 //                 message.edit('Set to Away From Keyboard').then(response => response.delete(1000).catch(error => console.log(error.stack)));
 //             }).catch(error => console.log(error.stack));
 //         } else if (nickname.search(' [is AFK]')) {
-//             message.guild.member(client.user).setNickname(nickname.replace(/ \[AFK\]/g, '')).then(() => {
+//             message.guild.member(bot.user).setNickname(nickname.replace(/ \[AFK\]/g, '')).then(() => {
 //                 message.edit('No longer AFK').then(response => response.delete(1000).catch(error => console.log(error.stack)));
 //             }).catch(error => console.log(error.stack));
 //         }
@@ -118,14 +118,14 @@ exports.reload = reload;
 //             })
 //             .then(messages => {
 //                 messagear = messages.array();
-//                 messagear = messagear.filter(message => message.author.id === client.user.id);
+//                 messagear = messagear.filter(message => message.author.id === bot.user.id);
 //                 messagear.length = delamount + 1;
 //                 messagear.map(message => message.delete().catch(console.error));
 //             });
 //     }
 	
 //     if (message.content.toLowerCase() == prefix + 'r' || message.content.toLowerCase() == prefix + 'reload') {
-//         message.channel.sendMessage(`:rocket: SelfBot is resetting, please wait. :rocket:`).then(function(t) {
+//         message.channel.sendMessage(`:rocket: Selfbot is resetting, please wait. :rocket:`).then(function(t) {
 //             process.exit(1);
 //         });
 //     }
@@ -136,10 +136,10 @@ exports.reload = reload;
 //         var embed = new Discord.RichEmbed();
 //         embed.setColor("#0099FF")
 //             .setFooter(' ', ' ')
-//             .setThumbnail(`${client.user.avatarURL}`)
+//             .setThumbnail(`${bot.user.avatarURL}`)
 //             .setTimestamp()
-//             .addField('> Uptime', (Math.round(client.uptime / (1000 * 60 * 60))) + " hours, " + (Math.round(client.uptime / (1000 * 60)) % 60) + " minutes, and " + (Math.round(client.uptime / 1000) % 60) + " seconds")
-//             .addField('> General Stats', `• Servers: ${client.guilds.size}\n• Channels: ${client.channels.size}\n• Users: ${client.users.size}`, true)
+//             .addField('> Uptime', (Math.round(bot.uptime / (1000 * 60 * 60))) + " hours, " + (Math.round(bot.uptime / (1000 * 60)) % 60) + " minutes, and " + (Math.round(bot.uptime / 1000) % 60) + " seconds")
+//             .addField('> General Stats', `• Servers: ${bot.guilds.size}\n• Channels: ${bot.channels.size}\n• Users: ${bot.users.size}`, true)
 //             .addField('> Working on', `• New Pando\'s commands, click this [Link to join](https://discord.gg/dfdvArY)`)
 //             .addField('> Update', '• Added learnjs command')
 //         message.channel.sendEmbed(
@@ -250,8 +250,8 @@ exports.reload = reload;
 
     //         if (evaled === null) evaled = 'null';
 
-    //         if (evaled.toString().includes(client.token) ||
-    //             insp.toString().includes(client.token)) return message.edit('Cannot complete eval due to token.');
+    //         if (evaled.toString().includes(bot.token) ||
+    //             insp.toString().includes(bot.token)) return message.edit('Cannot complete eval due to token.');
 
     //         tosend.push('**EVAL:**');
     //         tosend.push('\`\`\`xl');
@@ -361,7 +361,7 @@ exports.reload = reload;
 //         if (!reason) {
 //                 return message.reply("Please include a reason.");
 //         }
-//         if (!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
+//         if (!message.guild.member(bot.user).hasPermission("BAN_MEMBERS")) {
 //                 return message.channel.send("`ERROR:` I do not have permission to ban.");
 //         }
 //         firstMention.ban(1).then(member => {
@@ -396,7 +396,7 @@ exports.reload = reload;
 //         var user = message.mentions.users.first()
 //         var member = message.guild.member;
 //        // var reason = message.content.split(' ').slice(2).join(' ');
-//         if (!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
+//         if (!message.guild.member(bot.user).hasPermission("BAN_MEMBERS")) {
 //             return message.channel.send("`ERROR:` I do not have permission to unban.");
 //         }
 //         message.guild.fetchBans().then(users => {
@@ -457,7 +457,7 @@ exports.reload = reload;
 //          var reason = message.content.split(' ').slice(2).join(' ');
 //          if (!user) return message.channel.sendMessage('Please include a user to ban.');
 //          if (!reason) return message.channel.sendMessage('Please include a reason.');
-//          if (!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
+//          if (!message.guild.member(bot.user).hasPermission("BAN_MEMBERS")) {
 //             return message.channel.send("`ERROR:` I do not have permission to ban.");
 //         }
 //          member.ban().then(() => {
@@ -492,7 +492,7 @@ exports.reload = reload;
 //          var reason = message.content.split(' ').slice(2).join(' ');
 //          if (!user) return message.channel.sendMessage('Please include a user to kick.');
 //          if (!reason) return message.channel.sendMessage('Please include a reason.');
-//          if (!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
+//          if (!message.guild.member(bot.user).hasPermission("KICK_MEMBERS")) {
 //             return message.channel.send("`ERROR:` I do not have permission to kick.");
 //         }
 //          member.kick().then(() => {
@@ -554,7 +554,7 @@ exports.reload = reload;
 // }
 
 // if (message.content.toLowerCase().startsWith(prefix + "learnjs")) {
-//     if(message.author.client) return;
+//     if(message.author.bot) return;
 //     var embed = new Discord.RichEmbed();
 //     embed.setFooter('Javascript Code', ' ')
 //     .addField('Learning JavaScript', "**__Useful links for learning JavaScript and Node__**:\n\n**Codecademy online course**: https://www.codecademy.com/learn/javascript\n**Eloquent Javascript, free book**: http://eloquentjavascript.net/\n\n**Some Node**:\nhttp://nodeschool.io/\nhttps://www.codeschool.com/courses/real-time-web-with-node-js\n**Discord.js getting started guides**:\nhttps://www.youtube.com/channel/UCvQubaJPD0D-PSokbd5DAiw/videos\nhttps://www.youtube.com/channel/UCLun-hgcYUgNvCCj4sIa-jA/videos\n**Javascript reference/docs**: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference\n**discord.js documentation**: https://discord.js.org/#!/docs")
@@ -569,7 +569,7 @@ exports.reload = reload;
 // if (message.content.toLowerCase().startsWith(prefix + "servers")) {
 //     message.author.sendMessage("Here are the Verified Server\'s!")
 //     var embed = new Discord.RichEmbed();
-//     embed.addField('Server\'s', '- Pando\'s Hangout is where the support server for Pando https://discord.gg/dfdvArY\n- Critical Ops Clans is a gaming Community https://discord.gg/8aKgYJx\n- Panda\'s Hangout is the server where JayBot made https://discord.gg/R4AXuBM\n- SUPR3M3 Official is the server a clan on Critical Ops https://discord.gg/FdudkNN')
+//     embed.addField('Server\'s', '- Pando\'s Hangout is where the support server for Pando https://discord.gg/dfdvArY\n- Critical Ops Clans is a gaming Community https://discord.gg/8aKgYJx\n- Panda\'s Hangout is the server where Jaybot made https://discord.gg/R4AXuBM\n- SUPR3M3 Official is the server a clan on Critical Ops https://discord.gg/FdudkNN')
 //     .setColor("#EEFD3F")
 //     message.channel.sendEmbed(
 
@@ -642,4 +642,4 @@ exports.reload = reload;
 
 //     }
 
-client.login(config.tokens);
+bot.login(config.tokens);

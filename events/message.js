@@ -1,15 +1,15 @@
 let config = require('../config.json');
 module.exports = message => {
 	if (!message.content.startsWith(config.prefix)) return;
-  if (message.author.id !== client.user.id) return; //Only allows you to work with it, since it's called a selfbot :P
+  if (message.author.id !== bot.user.id) return; //Only allows you to work with it, since it's called a selfbot :P
 
-  let client = message.client;
+  let bot = message.bot;
   let args = message.content.split(' ');
   let command = args.shift().slice(config.prefix.length);
 
 	try {
 		let cmdFile = require(`../commands/${command}`);
-		cmdFile.run(client, message, args);
+		cmdFile.run(bot, message, args);
 	} catch (err) {
 		console.log(`Command ${command} failed\n${err.stack}`);
 	}
