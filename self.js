@@ -11,11 +11,6 @@ process.on('uncaughtException', function(err) {
     console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE bot FROM CRASHING
 });
 
-function AaN(args, i) {
-  if (args[i] === null || args[i] === "" || args[i] === undefined) return true;
-  return false;
-}
-
 const log = message => {
     console.log("I\'m ready asf!");
 };
