@@ -6,11 +6,11 @@ module.exports = msg => {
   const client = msg.client;
   const args = msg.content.split(' ');
   const command = args.shift().slice(config.prefix.length);
-  let prefix = config.prefix;
-    let channel = msg.channel;
-    let guild = msg.guild;
-    let text = msg.content;
-    if (!msg.content.startsWith(prefix)) return;
+  // let prefix = config.prefix;
+  //   let channel = msg.channel;
+  //   let guild = msg.guild;
+  //   let text = msg.content;
+  //   if (!msg.content.startsWith(prefix)) return;
 	try {
 		let cmdFile = require(`../commands/${command}`);
 		cmdFile.run(client, msg, args);
