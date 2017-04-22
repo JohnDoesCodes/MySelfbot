@@ -1,20 +1,20 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require('./config.json');
-var randomcolor = require('randomcolor')
-var moment = require('moment')
-var util = require('util')
-var winston = require('winston')
+const randomcolor = require('randomcolor')
+const moment = require('moment')
+const util = require('util')
+const winston = require('winston')
 require('./util/eventLoader')(client);
 
 process.on('uncaughtException', function(err) {
     console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE client FROM CRASHING
 });
 
-// function AaN(args, i) {
-//   if (args[i] === null || args[i] === "" || args[i] === undefined) return true;
-//   return false;
-// }
+function AaN(args, i) {
+  if (args[i] === null || args[i] === "" || args[i] === undefined) return true;
+  return false;
+}
 
 const log = message => {
     console.log("I\'m ready asf!");
