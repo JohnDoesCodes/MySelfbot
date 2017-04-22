@@ -1,6 +1,6 @@
-let Discord = require("discord.js");
-let client = new Discord.Client();
-let config = require('./config.json');
+const Discord = require("discord.js");
+const client = new Discord.Client();
+const config = require('./config.json');
 var randomcolor = require('randomcolor')
 var moment = require('moment')
 var util = require('util')

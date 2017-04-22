@@ -6,10 +6,7 @@ module.exports = message => {
   const client = message.client;
   const args = message.content.split(' ');
   const command = args.shift().slice(config.prefix.length);
-    // let prefix = config.prefix;
-    // let channel = message.channel;
-    // let guild = message.guild;
-    // let text = message.content;
+
 	try {
 		let cmdFile = require(`../commands/${command}`);
 		cmdFile.run(client, message, args);
