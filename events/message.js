@@ -1,6 +1,4 @@
 const config = require('../config.json');
-let client = new Discord.Client();
-let Discord = require("discord.js");
 module.exports = msg => {
 	if (!msg.content.startsWith(config.prefix)) return;
   if (msg.author.id !== client.user.id) return; //Only allows you to work with it, since it's called a selfbot :P
