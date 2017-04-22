@@ -1,4 +1,3 @@
-const client = new Discord.Client();
 module.exports = client => {
 	let games = [`with Coding`, `I love JavaScript`, `with Chris`, `xd`, `more xd`];
       setInterval(() => {
