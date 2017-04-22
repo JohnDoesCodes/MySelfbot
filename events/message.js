@@ -10,7 +10,6 @@ module.exports = msg => {
     let channel = msg.channel;
     let guild = msg.guild;
     let text = msg.content;
-    let command = text.substring(prefix.length, args[0].length).toLowerCase();
     if (!msg.content.startsWith(prefix)) return;
 	try {
 		let cmdFile = require(`../commands/${command}`);
