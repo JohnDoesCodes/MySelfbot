@@ -1,4 +1,4 @@
-exports.run = (bot, msg, args) => {
+exports.run = (client, msg, args) => {
         startTime = Date.now();
         channel.sendMessage("Pinging...").then((msg) => {
             endTime = Date.now();

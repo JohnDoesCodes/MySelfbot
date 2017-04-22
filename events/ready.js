@@ -1,7 +1,7 @@
-module.exports = bot => {
+module.exports = client => {
 	let games = [`with Coding`, `I love JavaScript`, `with Chris`, `xd`, `more xd`];
       setInterval(() => {
-        bot.user.setGame(games[Math.floor(Math.random() * games.length)])
+        client.user.setGame(games[Math.floor(Math.random() * games.length)])
 		console.log('I am ready!');
 }, 12000)
 };

@@ -1,14 +1,14 @@
 let Discord = require("discord.js");
-let bot = new Discord.Client();
+let client = new Discord.Client();
 let config = require('./config.json');
 var randomcolor = require('randomcolor')
 var moment = require('moment')
 var util = require('util')
 var winston = require('winston')
-require('./util/eventLoader')(bot);
+require('./util/eventLoader')(client);
 
 process.on('uncaughtException', function(err) {
-    console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE BOT FROM CRASHING
+    console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE client FROM CRASHING
 });
 
 function AaN(args, i) {
@@ -78,26 +78,26 @@ exports.reload = reload;
 //     }
 
 //     if (command == "afk") {
-//         let nickname = msg.guild.member(bot.user).nickname;
-//         let username = msg.guild.member(bot.user).user.username;
+//         let nickname = msg.guild.member(client.user).nickname;
+//         let username = msg.guild.member(client.user).user.username;
 //         if (!nickname) {
-//             msg.guild.member(bot.user).setNickname(username + ' [is AFK]').then(() => {
+//             msg.guild.member(client.user).setNickname(username + ' [is AFK]').then(() => {
 //                 msg.edit('Set to away from keyboard').then(response => response.delete(1000).catch(error => console.log(error.stack)));
 //             }).catch(error => console.log(error.stack));
 //         } else
 
 //         if (nickname.search(' [is AFK]')) {
-//             msg.guild.member(bot.user).setNickname('').then(() => {
+//             msg.guild.member(client.user).setNickname('').then(() => {
 //                 msg.edit('No longer AFK').then(response => response.delete(1000).catch(error => console.log(error.stack)));
 //             }).catch(error => console.log(error.stack));
 //         } else
 
 //         if (nickname && !nickname.includes(' [is AFK]')) {
-//             msg.guild.member(bot.user).setNickname(nickname + ' [is AFK]').then(() => {
+//             msg.guild.member(client.user).setNickname(nickname + ' [is AFK]').then(() => {
 //                 msg.edit('Set to Away From Keyboard').then(response => response.delete(1000).catch(error => console.log(error.stack)));
 //             }).catch(error => console.log(error.stack));
 //         } else if (nickname.search(' [is AFK]')) {
-//             msg.guild.member(bot.user).setNickname(nickname.replace(/ \[AFK\]/g, '')).then(() => {
+//             msg.guild.member(client.user).setNickname(nickname.replace(/ \[AFK\]/g, '')).then(() => {
 //                 msg.edit('No longer AFK').then(response => response.delete(1000).catch(error => console.log(error.stack)));
 //             }).catch(error => console.log(error.stack));
 //         }
@@ -118,7 +118,7 @@ exports.reload = reload;
 //             })
 //             .then(messages => {
 //                 msgar = messages.array();
-//                 msgar = msgar.filter(msg => msg.author.id === bot.user.id);
+//                 msgar = msgar.filter(msg => msg.author.id === client.user.id);
 //                 msgar.length = delamount + 1;
 //                 msgar.map(msg => msg.delete().catch(console.error));
 //             });
@@ -136,10 +136,10 @@ exports.reload = reload;
 //         var embed = new Discord.RichEmbed();
 //         embed.setColor("#0099FF")
 //             .setFooter(' ', ' ')
-//             .setThumbnail(`${bot.user.avatarURL}`)
+//             .setThumbnail(`${client.user.avatarURL}`)
 //             .setTimestamp()
-//             .addField('> Uptime', (Math.round(bot.uptime / (1000 * 60 * 60))) + " hours, " + (Math.round(bot.uptime / (1000 * 60)) % 60) + " minutes, and " + (Math.round(bot.uptime / 1000) % 60) + " seconds")
-//             .addField('> General Stats', `• Servers: ${bot.guilds.size}\n• Channels: ${bot.channels.size}\n• Users: ${bot.users.size}`, true)
+//             .addField('> Uptime', (Math.round(client.uptime / (1000 * 60 * 60))) + " hours, " + (Math.round(client.uptime / (1000 * 60)) % 60) + " minutes, and " + (Math.round(client.uptime / 1000) % 60) + " seconds")
+//             .addField('> General Stats', `• Servers: ${client.guilds.size}\n• Channels: ${client.channels.size}\n• Users: ${client.users.size}`, true)
 //             .addField('> Working on', `• New Pando\'s commands, click this [Link to join](https://discord.gg/dfdvArY)`)
 //             .addField('> Update', '• Added learnjs command')
 //         msg.channel.sendEmbed(
@@ -250,8 +250,8 @@ exports.reload = reload;
 
     //         if (evaled === null) evaled = 'null';
 
-    //         if (evaled.toString().includes(bot.token) ||
-    //             insp.toString().includes(bot.token)) return msg.edit('Cannot complete eval due to token.');
+    //         if (evaled.toString().includes(client.token) ||
+    //             insp.toString().includes(client.token)) return msg.edit('Cannot complete eval due to token.');
 
     //         tosend.push('**EVAL:**');
     //         tosend.push('\`\`\`xl');
@@ -361,7 +361,7 @@ exports.reload = reload;
 //         if (!reason) {
 //                 return msg.reply("Please include a reason.");
 //         }
-//         if (!msg.guild.member(bot.user).hasPermission("BAN_MEMBERS")) {
+//         if (!msg.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
 //                 return msg.channel.send("`ERROR:` I do not have permission to ban.");
 //         }
 //         firstMention.ban(1).then(member => {
@@ -396,7 +396,7 @@ exports.reload = reload;
 //         var user = msg.mentions.users.first()
 //         var member = msg.guild.member;
 //        // var reason = msg.content.split(' ').slice(2).join(' ');
-//         if (!msg.guild.member(bot.user).hasPermission("BAN_MEMBERS")) {
+//         if (!msg.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
 //             return msg.channel.send("`ERROR:` I do not have permission to unban.");
 //         }
 //         msg.guild.fetchBans().then(users => {
@@ -457,7 +457,7 @@ exports.reload = reload;
 //          var reason = msg.content.split(' ').slice(2).join(' ');
 //          if (!user) return msg.channel.sendMessage('Please include a user to ban.');
 //          if (!reason) return msg.channel.sendMessage('Please include a reason.');
-//          if (!msg.guild.member(bot.user).hasPermission("BAN_MEMBERS")) {
+//          if (!msg.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
 //             return msg.channel.send("`ERROR:` I do not have permission to ban.");
 //         }
 //          member.ban().then(() => {
@@ -492,7 +492,7 @@ exports.reload = reload;
 //          var reason = msg.content.split(' ').slice(2).join(' ');
 //          if (!user) return msg.channel.sendMessage('Please include a user to kick.');
 //          if (!reason) return msg.channel.sendMessage('Please include a reason.');
-//          if (!msg.guild.member(bot.user).hasPermission("KICK_MEMBERS")) {
+//          if (!msg.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
 //             return msg.channel.send("`ERROR:` I do not have permission to kick.");
 //         }
 //          member.kick().then(() => {
@@ -554,7 +554,7 @@ exports.reload = reload;
 // }
 
 // if (msg.content.toLowerCase().startsWith(prefix + "learnjs")) {
-//     if(msg.author.bot) return;
+//     if(msg.author.client) return;
 //     var embed = new Discord.RichEmbed();
 //     embed.setFooter('Javascript Code', ' ')
 //     .addField('Learning JavaScript', "**__Useful links for learning JavaScript and Node__**:\n\n**Codecademy online course**: https://www.codecademy.com/learn/javascript\n**Eloquent Javascript, free book**: http://eloquentjavascript.net/\n\n**Some Node**:\nhttp://nodeschool.io/\nhttps://www.codeschool.com/courses/real-time-web-with-node-js\n**Discord.js getting started guides**:\nhttps://www.youtube.com/channel/UCvQubaJPD0D-PSokbd5DAiw/videos\nhttps://www.youtube.com/channel/UCLun-hgcYUgNvCCj4sIa-jA/videos\n**Javascript reference/docs**: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference\n**discord.js documentation**: https://discord.js.org/#!/docs")
@@ -642,4 +642,4 @@ exports.reload = reload;
 
 //     }
 
-bot.login(config.tokens);
+client.login(config.tokens);
