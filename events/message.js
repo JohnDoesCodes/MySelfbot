@@ -8,12 +8,6 @@ module.exports = msg => {
   const bot = msg.bot;
   const args = msg.content.split(' ');
   const command = args.shift().slice(config.prefix.length);
-  let prefix = config.prefix
-  let channel = msg.channel;
-  let guild = msg.guild;
-  let text = msg.content;
-  let args = text.split(" ");
-  let command = text.substring(prefix.length, args[0].length).toLowerCase();
 
 	try {
 		let cmdFile = require(`../commands/${command}`);
