@@ -5,7 +5,7 @@ var randomcolor = require('randomcolor')
 var moment = require('moment')
 var util = require('util')
 var winston = require('winston')
-require('./util/eventLoader')(Bot);
+require('./util/eventLoader')(bot);
 
 process.on('uncaughtException', function(err) {
     console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE bot FROM CRASHING
