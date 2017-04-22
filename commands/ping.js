@@ -1,7 +1,7 @@
-exports.run = (client, msg, args) => {
+exports.run = (client, message, args) => {
         startTime = Date.now();
-        msg.channel.sendMessage("Pinging...").then((msg) => {
+        message.channel.sendMessage("Pinging...").then((message) => {
             endTime = Date.now();
-            msg.edit(`Pong! \`${Math.round(endTime - startTime)}ms\``);
+            message.edit(`Pong! \`${Math.round(endTime - startTime)}ms\``);
         });
 }
