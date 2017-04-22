@@ -1,10 +1,10 @@
-const Discord = require("discord.js");
-const client = new Discord.Client();
-const config = require('./config.json');
-const randomcolor = require('randomcolor')
-const moment = require('moment')
-const util = require('util')
-const winston = require('winston')
+let Discord = require("discord.js");
+let client = new Discord.Client();
+let config = require('./config.json');
+var randomcolor = require('randomcolor')
+var moment = require('moment')
+var util = require('util')
+var winston = require('winston')
 require('./util/eventLoader')(client);
 
 process.on('uncaughtException', function(err) {
