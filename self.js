@@ -3,7 +3,6 @@ const client = new Discord.Client();
 const config = require('./config.json');
 var randomcolor = require('randomcolor')
 var moment = require('moment')
-var util = require('util')
 var winston = require('winston')
 require('./util/eventLoader')(client);
 
