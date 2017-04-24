@@ -1,6 +1,6 @@
     var winston = require('winston')
 exports.run = (client, message, args) => {
-            let suffix = message.content.split(' ').slice(0).join(' ')
+        let suffix = msg.content.slice(6);
 
         try {
             let evaled = eval(suffix);
@@ -12,8 +12,8 @@ exports.run = (client, message, args) => {
 
             if (evaled === null) evaled = 'null';
 
-            if (evaled.toString().includes(client.tokens) ||
-                insp.toString().includes(client.tokens)) return message.edit('Cannot complete eval due to token.');
+            if (evaled.toString().includes(bot.token) ||
+                insp.toString().includes(bot.token)) return msg.edit('Cannot complete eval due to token.');
 
             tosend.push('**EVAL:**');
             tosend.push('\`\`\`xl');
@@ -34,7 +34,7 @@ exports.run = (client, message, args) => {
                 tosend.push(type);
                 tosend.push('\`\`\`');
             }
-            message.edit(tosend.join('\n'));
+            msg.edit(tosend.join('\n'));
             winston.log('info', `Evaluated ${tosend.join('\n')}`);
         } catch (err) {
             let tosend = [];
@@ -44,15 +44,7 @@ exports.run = (client, message, args) => {
             tosend.push('**Error:** \`\`\`xl');
             tosend.push(clean(err.stack));
             tosend.push('\`\`\`');
-            message.edit(tosend.join('\n'));
+            msg.edit(tosend.join('\n'));
             winston.log('info', `Error: ${tosend.join('\n')}`);
-        }
-    }
-
-    function clean(text) {
-        if (typeof(text) === "string") {
-            return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-        } else {
-            return text;
         }
 };
