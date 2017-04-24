@@ -61,65 +61,6 @@ exports.reload = reload;
 //         });
 //     }
 
-//     if (message.content.startsWith(prefix + 'unban')) {
-//         var user = message.mentions.users.first()
-//         var member = message.guild.member;
-//        // var reason = message.content.split(' ').slice(2).join(' ');
-//         if (!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
-//             return message.channel.send("`ERROR:` I do not have permission to unban.");
-//         }
-//         message.guild.fetchBans().then(users => {
-//             if (isNaN(message.content.split(" ")[1])) {
-//                 user = users.find('username', message.content.split(" ")[1]);
-//             } else {
-//                 user = users.get(message.content.split(" ")[1]);
-//             }
-//             message.guild.unban(user);
-//             // message.user.sendMessage(`You have been unbanned from ${message.guild.name}`)
-//             message.channel.sendMessage(`${user.username} has been unbanned from the guild! :ok_hand::skin-tone-4:`)
-//             // var embed = new Discord.RichEmbed();
-//             // embed.addField(`Moderator`, `${message.author.username}`, true)
-//             //     .setColor(0xFFF00)
-//             //     .setTimestamp()
-//             //     .addField('User Unbanned', `${user}`, true)
-//             // message.guild.channels.find('name', 'mod-log').sendEmbed(
-//             //     embed, {
-//             //         disableEveryone: true
-//             //     }
-//             // );
-//         });
-//     }
-
-// if (command == "warn") {
-//         var reason = message.content.split(' ').slice(2).join(' ');
-//         var user = message.mentions.users.first();
-//         if (!user) return message.channel.sendMessage('Please include a user to warn.');
-//         if (!reason) return message.channel.sendMessage('Please include a reason.');
-//         var embed = new Discord.RichEmbed();
-//         embed.setAuthor(`Warning`, ` `)
-//         .setColor("#ECC31A")
-//         .setDescription(`${user.username}`, true)
-//         .setThumbnail(`${user.avatarURL}`)
-//         .setTimestamp()
-//         .addField('Guild In', `${message.guild.name}`,true)
-//         .addField('Reason', `${reason}`, true)
-//         user.sendEmbed(embed, {
-//                 disableEveryone: true
-//         });
-//         message.channel.sendMessage(`***${user.username}*** ***Has been warned*** 👌`)
-//         var embed = new Discord.RichEmbed();
-//         embed.setAuthor(`Moderator`, ` `)
-//         .setColor("#ECC31A")
-//         .setDescription(`${message.author.username}`, true)
-//         .setThumbnail(`${user.avatarURL}`)
-//         .setTimestamp()
-//         .addField('User Warned',`${user.username}`, true)
-//         .addField('Reason', `${reason}`, true)
-//         message.guild.channels.find('name', 'mod-log').sendEmbed(embed, {
-//                 disableEveryone: true
-//         });
-// }
-
 //  if (command == "ban") {
 //          var user = message.mentions.users.first();
 //          var member = message.guild.member(user);
