@@ -61,12 +61,6 @@ exports.reload = reload;
 //         });
 //     }
 
-//    if (message.content.startsWith(prefix + 'avi')) {
-//   if (!message.guild || !message.member) return;
-//        message.mentions.users.first();
-// 	   message.channel.sendMessage(message.author.avatarURL);
-//     }
-
 //     if (message.content.startsWith(prefix + "get")) {
 //     if (!message.guild || !message.member) return;
 //     var mention = message.mentions.users.first();
