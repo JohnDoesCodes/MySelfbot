@@ -6,6 +6,7 @@ module.exports = message => {
   if (message.author.id !== client.user.id) return;
 	let text = message.content;
   const args = text.split(" ");
+	let prefix = config.prefix;
   let command = text.substring(prefix.length, args[0].length).toLowerCase();
 
 	try {
