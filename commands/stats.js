@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 exports.run = (client, message, args) => {
             var moment = require('moment')
         var embed = new Discord.RichEmbed();
