@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 exports.run = (client, message, args) => {
  var mention = message.mentions.users.first();
  if(message.mentions.users.size === 0) {
