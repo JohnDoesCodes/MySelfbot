@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 exports.run = (client, message, args) => {
     if (!message.guild || !message.member) return;
    message.channel.sendMessage(

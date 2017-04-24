@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 exports.run = (client, message, args) => {
             let nickname = message.guild.member(client.user).nickname;
         let username = message.guild.member(client.user).user.username;
