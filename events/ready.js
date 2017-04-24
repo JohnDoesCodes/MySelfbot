@@ -1,3 +1,4 @@
+const config = require('../config.json');
 module.exports = client => {
 	let games = [`with Coding`, `I love JavaScript`, `with Chris`, `xd`, `more xd`];
       setInterval(() => {

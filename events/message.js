@@ -1,9 +1,9 @@
 const config = require('../config.json');
 module.exports = message => {
-	if (!message.content.startsWith(config.prefix)) return;
-  if (message.author.id !== client.user.id) return; //Only allows you to work with it, since it's called a selfclient :P
 
-  const client = message.client;
+  let client = message.client;
+	if (!message.content.startsWith(config.prefix)) return;
+  if (message.author.id !== client.user.id) return;
   const args = message.content.split(' ');
   const command = args.shift().slice(config.prefix.length);
 
