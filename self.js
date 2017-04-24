@@ -34,12 +34,6 @@ var reload = (message, cmd) => {
 };
 exports.reload = reload;
 
-//     if (message.content.toLowerCase().startsWith(prefix + "cb")) {
-//         var cb = message.content.split(" ").slice(1).join(" ");
-//         message.delete();
-//         message.channel.sendMessage("```js\n" + cb + "\n```");
-//     }
-
 //     if (command == "afk") {
 //         let nickname = message.guild.member(client.user).nickname;
 //         let username = message.guild.member(client.user).user.username;
