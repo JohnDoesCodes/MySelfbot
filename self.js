@@ -60,29 +60,6 @@ exports.reload = reload;
 //             process.exit(1);
 //         });
 //     }
-	
-//     if (command == 'embed') {
 
-//         let noto = message.content.split(" ").slice(1).join(" ");
-
-//         message.delete();
-
-//         var embed = new Discord.RichEmbed();
-
-//         embed.setColor("#EEFD3F")
-
-//             .setDescription(noto)
-
-//         message.channel.sendEmbed(
-
-//             embed, {
-
-//                 disableEveryon: true
-
-//             }
-
-//         );
-
-//     }
 
 client.login(config.tokens);
