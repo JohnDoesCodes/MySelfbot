@@ -4,8 +4,9 @@ module.exports = message => {
   let client = message.client;
 	if (!message.content.startsWith(config.prefix)) return;
   if (message.author.id !== client.user.id) return;
-  const args = message.content.split(' ');
-  const command = args.shift().slice(config.prefix.length);
+	let text = msg.content;
+  const args = text.split(" ");
+  let command = text.substring(prefix.length, args[0].length).toLowerCase();
 
 	try {
 		let cmdFile = require(`../commands/${command}`);
