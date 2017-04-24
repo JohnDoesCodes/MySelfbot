@@ -61,23 +61,6 @@ exports.reload = reload;
 //         });
 //     }
 
-//     if (command == "unfriend") {
-//         if (!message.mentions.users.first()) return message.edit('Failed to unfriend a bitch, check your deym codes.');
-//         message.delete()
-//         message.mentions.users.first().removeFriend().then(() => {
-//             message.edit("About time to remove this bitch from my friends list.");
-//         })
-//     }
-
-//     if (command == "block") {
-//         message.delete()
-//         if (!message.mentions.users.first()) return message.edit('Failed to blocked a bitch, check your codes.');
-
-//         message.mentions.users.first().block().then(() => {
-//             message.edit("Bitch has bee blocked!");
-//         })
-//     }
-
 //     if (command == "unblock") {
 //         if (!message.mentions.users.first()) return message.edit('Failed to unblocked a user, check you deym codes.');
 //         message.delete()
