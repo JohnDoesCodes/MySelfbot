@@ -12,5 +12,6 @@ exports.run = (client, message, args) => {
                 user = users.get(message.content.split(" ")[1]);
             }
             message.guild.unban(user);
+            message.channel.sendMessage(`${user.username} has been unban.`)
         });
 };
