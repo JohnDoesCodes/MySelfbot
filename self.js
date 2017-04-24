@@ -60,15 +60,6 @@ exports.reload = reload;
 //             process.exit(1);
 //         });
 //     }
-
-//     if (message.content.startsWith(prefix + "get")) {
-//     if (!message.guild || !message.member) return;
-//     var mention = message.mentions.users.first();
-//     if (!mention) {
-//      return message.channel.sendMessage("\`?\` | Mention a user.")
-//     }
-//     message.channel.sendMessage(mention.avatarURL)
-//    }
 	
 // 	if (message.content.toLowerCase().startsWith(prefix + "links")) {
 //     var embed = new Discord.RichEmbed();
