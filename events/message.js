@@ -7,7 +7,7 @@ function AaN(args, i) {
 }
 
   let client = message.client;
-	if (!message.content.startsWith(config.prefix)) return;
+	if (!message.content.startsWith(prefix)) return;
   if (message.author.id !== client.user.id) return;
 	let text = message.content;
   const args = text.split(" ");
