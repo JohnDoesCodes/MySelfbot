@@ -60,58 +60,6 @@ exports.reload = reload;
 //             process.exit(1);
 //         });
 //     }
-
-// if (message.content.toLowerCase().startsWith(prefix + "servers")) {
-//     message.author.sendMessage("Here are the Verified Server\'s!")
-//     var embed = new Discord.RichEmbed();
-//     embed.addField('Server\'s', '- Pando\'s Hangout is where the support server for Pando https://discord.gg/dfdvArY\n- Critical Ops Clans is a gaming Community https://discord.gg/8aKgYJx\n- Panda\'s Hangout is the server where Jayclient made https://discord.gg/R4AXuBM\n- SUPR3M3 Official is the server a clan on Critical Ops https://discord.gg/FdudkNN')
-//     .setColor("#EEFD3F")
-//     message.channel.sendEmbed(
-
-//             embed, {
-
-//                 disableEveryone: true
-
-//             }
-
-//         );
-// }
-	
-// 	if (message.content.startsWith(prefix + "vac")) {
-// 		message.channel.sendMessage("**Vac**ation"),
-// message.edit("===========================  :red_car: "),
-// message.edit("==========================  :red_car: "),
-// message.edit("=========================  :red_car: "),
-// message.edit("========================  :red_car: "),
-// message.edit("======================  :red_car: "),
-// message.edit("=====================  :red_car: "),
-// message.edit(":warning: **Traffic** :warning: "),
-// message.edit("=======================  :red_car: "),
-// message.edit("======================  :red_car: "),
-// message.edit("=====================  :red_car: "),
-// message.edit("====================  :red_car: "),
-// message.edit("===================  :red_car: "),
-// message.edit("==================  :red_car: "),
-// message.edit("=================  :red_car: "),
-// message.edit("================  :red_car: "),
-// message.edit("===============  :red_car: "),
-// message.edit("==============  :red_car: "),
-// message.edit("=============  :red_car: "),
-// message.edit("============  :red_car: "),
-// message.edit("===========  :red_car: "),
-// message.edit("==========  :red_car: "),
-// message.edit("=========  :red_car: "),
-// message.edit("========  :red_car: "),
-// message.edit("=======  :red_car: "),
-// message.edit("======  :red_car: "),
-// message.edit("=====  :red_car: "),
-// message.edit("====  :red_car: "),
-// message.edit("===  :red_car: "),
-// message.edit("==  :red_car: "),
-// message.edit("=  :red_car: "),
-// message.edit(" :red_car: "),
-// message.edit("**Vac**ation over")
-// 	}
 	
 //     if (command == 'embed') {
 
