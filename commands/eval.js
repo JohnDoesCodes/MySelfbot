@@ -47,4 +47,12 @@ exports.run = (client, message, args) => {
             message.edit(tosend.join('\n'));
             winston.log('info', `Error: ${tosend.join('\n')}`);
         }
+
+            function clean(text) {
+        if (typeof(text) === "string") {
+            return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
+        } else {
+            return text;
+        }
+    }
 };
