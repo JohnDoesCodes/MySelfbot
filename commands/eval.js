@@ -12,8 +12,8 @@ exports.run = (client, message, args) => {
 
             if (evaled === null) evaled = 'null';
 
-            if (evaled.toString().includes(client.token) ||
-                insp.toString().includes(client.token)) return message.edit('Cannot complete eval due to token.');
+            if (evaled.toString().includes(client.tokens) ||
+                insp.toString().includes(client.tokens)) return message.edit('Cannot complete eval due to token.');
 
             tosend.push('**EVAL:**');
             tosend.push('\`\`\`xl');
