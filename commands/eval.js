@@ -1,4 +1,5 @@
 exports.run = (client, message, args) => {
+    var winston = require('winston')
             let suffix = message.content.slice(6);
 
         try {
