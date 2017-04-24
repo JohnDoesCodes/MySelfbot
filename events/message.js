@@ -1,6 +1,11 @@
 const config = require('../config.json');
 module.exports = message => {
 
+function AaN(args, i) {
+    if (args[i] === null || args[i] === "" || args[i] === undefined) return true;
+    return false;
+}
+
   let client = message.client;
 	if (!message.content.startsWith(config.prefix)) return;
   if (message.author.id !== client.user.id) return;
