@@ -1,3 +1,4 @@
+const bot = new Discord.Client();
 exports.run = (bot, message, args) => {
         startTime = Date.now();
         message.channel.sendMessage("Pinging...").then((message) => {
