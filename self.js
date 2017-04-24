@@ -61,52 +61,6 @@ exports.reload = reload;
 //         });
 //     }
 
-//     if (message.content.toLowerCase().startsWith(prefix + 'quote') || message.content.toLowerCase().startsWith(prefix + 'q')) {
-
-//         var quote = message.content.split(" ").slice(1).join(" ");
-
-//         message.delete();
-
-//         if (quote.length < 1) {
-
-//             return message.channel.sendMessage("Please specify a message ID.");
-
-//         }
-
-//         message.channel.fetchMessages({
-
-//             limit: 1,
-
-//             around: quote
-
-//         }).then(messages => {
-
-//             const fm = messages.first();
-
-//             message.channel.sendMessage("", {
-
-//                 embed: {
-
-//                     color: 0x3cb8c9,
-
-//                     author: {
-
-//                         name: `${fm.author.username}#${fm.author.discriminator}`,
-
-//                         icon_url: fm.author.avatarURL
-
-//                     },
-
-//                     description: fm.content
-
-//                 }
-
-//             });
-
-//         });
-
-//     }
-
     // if (command === "eval") {
     //     let suffix = message.content.slice(6);
 
