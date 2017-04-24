@@ -1,6 +1,6 @@
     var winston = require('winston')
 exports.run = (client, message, args) => {
-            let suffix = message.content.slice(6);
+            let suffix = message.content.split(' ').slice(0).join(' ')
 
         try {
             let evaled = eval(suffix);
