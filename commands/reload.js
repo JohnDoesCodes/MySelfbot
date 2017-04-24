@@ -1,5 +1,5 @@
 const main = require('../self.js');
-exports.run = function(bot, message, args) {
+exports.run = function(client, message, args) {
 	let cmd = args.join(' ');
 	main.reload(message, cmd);
 };
