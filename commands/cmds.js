@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
     if (!message.guild || !message.member) return;
-   message.channel.sendMessage("Use selfmcmds or selfncmds.")
+   message.channel.sendMessage("Use `selfmcmds` or `selfncmds`.")
 };
 
 //     if (!message.guild || !message.member) return;
