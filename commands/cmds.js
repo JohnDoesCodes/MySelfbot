@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 exports.run = (client, message, args) => {
 var embed = new Discord.RichEmbed();
 embed.setFooter('Self bot Commands', ' ')
-.addField('Moderation Commands', "selfping\nwill be responed by pong and ms\nselfvac\nvacation xD\nselflearnjs\nshow\'s the how usefull links on leaning js") 
+.addField('Moderation Commands', "**selfping**\nwill be responed by pong and ms\n**selfvac**\nvacation xD\n**selflearnjs**\nshow\'s the how usefull links on leaning js") 
 message.channel.sendEmbed(
         embed, {
             disableEveryon: true
