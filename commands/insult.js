@@ -1,4 +1,5 @@
 exports.run = (client, message, args) => {
+  message.delete()
       if (!message.guild || !message.member) return;
 let user = message.guild.member(message.mentions.users.first());
 if (!user)

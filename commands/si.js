@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
+    message.delete()
         var embed = new Discord.RichEmbed();
     var moment = require('moment')
     embed.addField("> Server Info", `• Server name: ${message.guild.name}\n• Server ID: ${message.guild.id}\n• Owner: ${message.guild.owner.user.username}\n• Owner ID: ${message.guild.owner.id}\n• ${message.guild.memberCount} Members`, true)
