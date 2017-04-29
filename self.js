@@ -6,8 +6,13 @@ var moment = require('moment')
 var winston = require('winston')
 require('./util/eventLoader')(client);
 
+/* 
+		Selfbot made by:
+		   Johnツ#9897
+*/
+
 process.on('uncaughtException', function(err) {
-    console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE client FROM CRASHING
+    console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE BOT FROM CRASHING
 });
 
 function AaN(args, i) {

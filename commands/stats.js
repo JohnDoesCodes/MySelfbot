@@ -3,7 +3,7 @@ exports.run = (client, message, args) => {
     message.delete()
             var moment = require('moment')
         var embed = new Discord.RichEmbed();
-        embed.setColor("#0099FF")
+        embed.setColor("#FF0000")
             .setFooter(' ', ' ')
             .setThumbnail(`${client.user.avatarURL}`)
             .setTimestamp()

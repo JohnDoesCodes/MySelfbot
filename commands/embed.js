@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
 
         var embed = new Discord.RichEmbed();
 
-        embed.setColor("#EEFD3F")
+        embed.setColor("#FF0000")
 
             .setDescription(noto)
 
