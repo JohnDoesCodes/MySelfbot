@@ -5,6 +5,7 @@ exports.run = (client, message, args) => {
    '```asciidoc' +
    '\n= Normal Commands =' +
    '\nselfping         :: selfping will be responed by pong and ms' + 
+   '\nselffaq          :: selffaq Frequently Asked Questions about selfbots.' + 
    '\nselfvac          :: selfvac vacation xD' +
    '\nselflearnjs      :: selflearnjs show\'s the how usefull links on leaning js' +
    '\nselflinks        :: selflinks show\'s my social media of John site and server' +
