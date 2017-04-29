@@ -1,3 +1,4 @@
+const Discord = require("discord.js");
 exports.run = (client, message, args) => {
         message.delete()
     var embed = new Discord.RichEmbed();
