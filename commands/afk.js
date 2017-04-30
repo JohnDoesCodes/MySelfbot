@@ -3,7 +3,7 @@ exports.run = (client, message, args) => {
             let nickname = message.guild.member(client.user).nickname;
         let username = message.guild.member(client.user).user.username;
         if (!nickname) {
-            message.guild.member(client.user).setNickname(message.member.displayName + ' [is AFK]').then(() => {
+            message.guild.member(client.user).setNickname(username + ' [is AFK]').then(() => {
                 message.edit('Set to away from keyboard').then(response => response.delete(1000).catch(error => console.log(error.stack)));
             }).catch(error => console.log(error.stack));
         } else
