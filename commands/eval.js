@@ -1,3 +1,4 @@
+const config = require('./config.json');
 exports.run = (client, message, args) => {
     var arg = message.content.split(" ").slice(1).join(' ')
 
