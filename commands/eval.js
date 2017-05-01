@@ -1,58 +1,27 @@
     var winston = require('winston')
 exports.run = (client, message, args) => {
-        let suffix = message.content.slice(6);
+    var arg = message.content.split(" ").slice(1).join(' ')
 
-        try {
-            let evaled = eval(suffix);
-            let type = typeof evaled;
-            let insp = util.inspect(evaled, {
-                depth: 0
-            });
-            let tosend = [];
+    try {
 
-            if (evaled === null) evaled = 'null';
+      message.channel.sendEmbed({
 
-            if (evaled.toString().includes(client.tokens) ||
-                insp.toString().includes(client.tokens)) return message.edit('Cannot complete eval due to token.');
+      color: 0x32CD32,
 
-            tosend.push('**EVAL:**');
-            tosend.push('\`\`\`xl');
-            tosend.push(clean(suffix));
-            tosend.push('\`\`\`');
-            tosend.push('**Evaluates to:**');
-            tosend.push('\`\`\`xl');
-            tosend.push(clean(evaled));
-            tosend.push('\`\`\`');
-            if (evaled instanceof Object) {
-                tosend.push('**Inspect:**');
-                tosend.push('\`\`\`xl');
-                tosend.push(insp);
-                tosend.push('\`\`\`');
-            } else {
-                tosend.push('**Type:**');
-                tosend.push('\`\`\`xl');
-                tosend.push(type);
-                tosend.push('\`\`\`');
-            }
-            message.edit(tosend.join('\n'));
-            winston.log('info', `Evaluated ${tosend.join('\n')}`);
-        } catch (err) {
-            let tosend = [];
-            tosend.push('**EVAL:** \`\`\`xl');
-            tosend.push(clean(suffix));
-            tosend.push('\`\`\`');
-            tosend.push('**Error:** \`\`\`xl');
-            tosend.push(clean(err.stack));
-            tosend.push('\`\`\`');
-            message.edit(tosend.join('\n'));
-            winston.log('info', `Error: ${tosend.join('\n')}`);
-        }
+      description: `\`OUTPUT\`\n\`\`\`js\n${eval(arg)}\n\`\`\``
 
-            function clean(text) {
-        if (typeof(text) === "string") {
-            return text.replace(/`/g, "`" + String.fromCharCode(8203)).replace(/@/g, "@" + String.fromCharCode(8203));
-        } else {
-            return text;
-        }
-    }
+    })
+
+  } catch(e) {
+
+    message.channel.sendEmbed({
+
+    color: 0x8B0000,
+
+    description: `\`ERROR\`\n\`\`\`js\n${e}\n\`\`\``
+
+  })
+
+}
+
 };
