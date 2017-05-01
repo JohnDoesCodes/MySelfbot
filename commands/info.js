@@ -3,7 +3,7 @@ exports.run = (client, message, args) => {
   message.delete()
         var embed = new Discord.RichEmbed();
     var moment = require('moment')
-    embed.addField("> Member Details", `• Name: ${message.author.username}\n• Discrim: #${message.author.discriminator}\n• ID: ${message.author.id}\n• Roles: ${message.member.roles.filter(r => {return r.name != '@everyone'}).map(r => r.name).join(', ')}\n• Joined at: ${moment(message.joinedAt).format('ddd MMM Do YYYY')}`, true)
+    embed.addField("> Member Details", `• Name: ${message.author.username}\n• Discrim: #${message.author.discriminator}\n• ID: ${message.author.id}\n• Roles: ${message.member.roles.filter(r => {return r.name != '@everyone'}).map(r => r.name).join(', ')}\n• Joined at: ${moment(message.author.joinedAt).format('ddd MMM Do YYYY')}`, true)
     .addField('> User Details', `• Status: ${message.author.presence.status}\n• Game: ${message.author.presence.game === null ? "No Game" : message.author.presence.game.name}\n• Joined Discord: ${moment(message.author.createdAt).format('ddd MMM Do YYYY')}`, true)
     .setColor("#FF0000")
     .setFooter(' ', ' ')
