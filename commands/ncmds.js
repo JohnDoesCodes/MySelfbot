@@ -8,6 +8,7 @@ exports.run = (client, message, args) => {
    '\nselfsbinfo       :: selfsbinfo Frequently Asked Questions about selfbots.' + 
    '\nselfcasb         :: selfcasb helps you to create a selfbots.' + 
    '\nselfshowcode     :: selfshowcode show the all the codes.' + 
+   '\nselftoken        :: selftoken info on user token.' + 
    '\nselfvac          :: selfvac vacation xD' +
    '\nselflearnjs      :: selflearnjs show\'s the how usefull links on leaning js' +
    '\nselflinks        :: selflinks show\'s my social media of John site and server' +
