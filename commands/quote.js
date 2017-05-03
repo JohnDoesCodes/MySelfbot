@@ -27,7 +27,7 @@ exports.run = (client, message, args) => {
 
                     author: {
 
-                        name: `${fm.author.username}#${fm.author.discriminator}`,
+                        name: `${fm.author.tag}`,
 
                         icon_url: fm.author.avatarURL
 
