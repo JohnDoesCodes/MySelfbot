@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
    '\nselfpp           :: selfpp 8 lang how to save the princess.' + 
    '\nselfvac          :: selfvac vacation xD' +
    '\nselflearnjs      :: selflearnjs show\'s the how usefull links on leaning js' +
-   '\nselflinks        :: selflinks show\'s my social media of John site and server' +
+   '\nselflinks        :: selflinks show\'s my social media site and server' +
    '\nselfstats        :: selfstats used to show the selfbot stats' +
    '\nselffriend       :: selffriend <@user>  used to add friend' +
    '\nselfunfriend     :: selfunfriend <@user>  used to unfriend' +
@@ -22,7 +22,7 @@ exports.run = (client, message, args) => {
    '\nselfinfo         :: selfinfo used to show user\'s info' +
    '\nselfw            :: selfw <@user> used to show user\'s info' +
    '\nselfsi           :: selfsi used to show server\'s info' +
-   '\nselfembed        :: selfembed used for text embed <Bench role require>' +
+   '\nselfembed        :: selfembed used for text embed' +
    '\nselfavi          :: selfavi used to show your avatar' +
    '\nselfget          :: selfget <@user> used to get user\'s avatar' +
    '\nselfcb           :: selfcb this is the code block thingy```'
