@@ -39,7 +39,14 @@ var reload = (message, cmd) => {
 };
 exports.reload = reload;
 
-
+    // if (command == "prune") {
+    //     var amount = parseInt(args[1]);
+    //     message.channel.fetchMessages({
+    //             limit: amount
+    //         })
+    //         .then(messages => {
+    //             messages.map(message => message.delete().catch(console.error));
+    //         }).catch(console.error);
     // } else if (command == "clear") {
     //     let delamount = parseInt(args[1]) ? parseInt(args[1]) : 1;
     //     message.channel.fetchMessages({
@@ -50,5 +57,6 @@ exports.reload = reload;
     //             messagear = messagear.filter(message => message.author.id === client.user.id);
     //             messagear.length = delamount + 1;
     //             messagear.map(message => message.delete().catch(console.error));
-	
+    //         });
+
 client.login(config.tokens);
