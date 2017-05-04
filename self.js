@@ -58,13 +58,5 @@ exports.reload = reload;
 //                 messagear.length = delamount + 1;
 //                 messagear.map(message => message.delete().catch(console.error));
 //             });
-//     }
-	
-//     if (message.content.toLowerCase() == prefix + 'r' || message.content.toLowerCase() == prefix + 'reload') {
-//         message.channel.sendMessage(`:rocket: Selfclient is resetting, please wait. :rocket:`).then(function(t) {
-//             process.exit(1);
-//         });
-//     }
-
 
 client.login(config.tokens);
