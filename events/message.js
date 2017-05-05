@@ -5,7 +5,6 @@ module.exports = message => {
 	if (!message.content.startsWith(config.prefix)) return;
   if (message.author.id !== client.user.id) return;
   const args = message.content.split(' ');
-	var suffix = message.content.split(' ').slice(1).join(' ');
   const command = args.shift().slice(config.prefix.length);
 
 	try {
