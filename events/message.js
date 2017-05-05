@@ -13,4 +13,4 @@ module.exports = message => {
 	} catch (err) {
 		console.log(`Command ${command} failed\n${err.stack}`);
 	}
-};
+}; 
