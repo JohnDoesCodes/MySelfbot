@@ -4,7 +4,7 @@ module.exports = message => {
   let client = message.client;
 	if (!message.content.startsWith(config.prefix)) return;
   if (message.author.id !== client.user.id) return;
-  const args = message.content.split(' ');
+  const args = message.content.split(' ').slice(1).join(' ');
   const command = args.shift().slice(config.prefix.length);
 
 	try {
