@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
    '\nselfprune        :: selfprune used to clear anywhere to 1-100 messages' +
    '\nselfgm           :: selfgm used to mass messages on a server' +
    '\nselfrestart      :: selfrestart used to restart. ' +
-   '\nselfreset        :: selfreset used to reset the selfbot' +
+   '\nselfsearch       :: selfsearch used to searches a number of messages for some text' +
    '\nselfsoftban      :: selfsoftban <@user>  <reason required> used to softban user\'s' +
    '\nselfwarn         :: selfwarn <@user> <reason required> used to warn people' +
    '\nselfban          :: selfban <@user>  <reason required> used to ban users' +
