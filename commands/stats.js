@@ -4,7 +4,7 @@ exports.run = (client, message, args) => {
             var moment = require('moment')
         var embed = new Discord.RichEmbed();
         embed.setColor("#FF0000")
-            .setAuthor(`${message.author.tag}`, `${message.author.avatarURL}`)
+            .setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL}`)
             // .setThumbnail(`${client.user.avatarURL}`)
             .setTimestamp()
             .addField('> Uptime', (Math.round(client.uptime / (1000 * 60 * 60))) + " hours, " + (Math.round(client.uptime / (1000 * 60)) % 60) + " minutes, and " + (Math.round(client.uptime / 1000) % 60) + " seconds")
