@@ -5,4 +5,9 @@ exports.run = (client, message, args) => {
     .setTimestamp()
     .addField('Info', 'This selfbot owns by aeris#9897, give credits to her.')
     .addField('Github Source', `Click this [link](https://github.com/JohnDoesCodes) for the selfbot codes.`)
+message.channel.sendEmbed(
+            embed, {
+                disableEveryone: true
+            }
+        );
 }
