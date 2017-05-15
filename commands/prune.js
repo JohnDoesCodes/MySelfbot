@@ -16,7 +16,7 @@ exports.run = (client, message, args) => {
 
                 .then(() => {
 
-                    message.channel.send(`\u2705 Purged \`${count}\` messages.`)
+                    message.channel.send(`\u2705 Pruned \`${count}\` messages.`)
 
                         .then(m => m.delete(2000));
 
