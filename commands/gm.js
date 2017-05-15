@@ -4,5 +4,7 @@ exports.run = (client, message) => {
 if (!args) {
     return message.channel.sendMessage("Gimme something to say nigga.")
   }
-message.guild.members.map(m => m.sendMessage(`${args}`))
+message.guild.members.map(m => m.sendMessage(`${args}`)); {
+    return message.channel.sendMessage("Done!")
+}
 }
