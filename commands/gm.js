@@ -7,4 +7,4 @@ if (!args) {
 message.guild.members.map(m => m.sendMessage(`${args}`)); {
     return message.channel.sendMessage("Done!")
 }
-}
+};

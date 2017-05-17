@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
     message.delete()
+    if (!message.guild.member(client.user).hasPermission("EMBED_LINKS")) {
+            return message.channel.send("`ERROR:` I do not have permission to send Embed, contact administrator to get perm to send embed.");
+        }
         var embed = new Discord.RichEmbed();
     var moment = require('moment')
     embed.addField("> Server Info", `• Server name: ${message.guild.name}\n• Server ID: ${message.guild.id}\n• Owner: ${message.guild.owner.user.username}\n• Owner ID: ${message.guild.owner.id}\n• ${message.guild.memberCount} Members`, true)

@@ -1,6 +1,9 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
     message.delete()
+    if (!message.guild.member(client.user).hasPermission("EMBED_LINKS")) {
+            return message.channel.send("`ERROR:` I do not have permission to send Embed, contact administrator to get perm to send embed.");
+        }
     var embed = new Discord.RichEmbed();
     embed.setFooter(`Node.js Learning Codes Made by ${message.author.tag}`, `${message.author.displayAvatarURL}`)
     // .setAuthor(`${message.author.tag}`, 'https://cdn.discordapp.com/attachments/308137730141847552/309334653511401482/anime.jpg')
