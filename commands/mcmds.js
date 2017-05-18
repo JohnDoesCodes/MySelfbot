@@ -5,6 +5,7 @@ exports.run = (client, message, args) => {
    '```asciidoc' +
    '\n= Moderation Commands =' +
    '\nselfprune        :: selfprune used to clear anywhere to 1-100 messages' +
+   '\nselfclear        :: selfclear used to clear own message to 1-100 messages' +
    '\nselfgm           :: selfgm used to mass messages on a server' +
    '\nselfrestart      :: selfrestart used to restart. ' +
    '\nselfsearch       :: selfsearch used to searches a number of messages for some text' +
