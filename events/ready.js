@@ -1,5 +1,5 @@
 const config = require('../config.json');
-module.exports = client => {
+module.exports = (client, message) => {
   var argresult = message.content.split(' ').slice(2).join(' ');
 	// let games = [`with Coding`, `I love JavaScript`, `xd`, `more xd`];
   //     setInterval(() => {
