@@ -9,6 +9,7 @@ embed.setColor(0x42c5f4)
 .addField(':link: Server Invitation :link:', 'gdsx')
 .addField(':partner: Apply for a partnership!', '(Click here)[https://google.com/]')
 .addField(':certifieddev: Apply for staff!', '(Click here)[https://google.com/]')
+.setThumbnail(`${message.guild.iconURL}`)
 message.channel.sendEmbed(
             embed, {
                 disableEveryone: true
