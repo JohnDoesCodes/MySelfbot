@@ -4,16 +4,17 @@ exports.run = (client, message, args) => {
   if (!message.guild.member(client.user).hasPermission("EMBED_LINKS")) {
             return message.channel.send("`ERROR:` I do not have permission to send Embed, contact administrator to get perm to send embed.");
         }
-        var embed = new Discord.RichEmbed();
-        embed.setFooter("Bot Developers")
-        .setColor("#53A6F3")
+    	var embed = new Discord.RichEmbed();
+        embed.setColor("#53A6F3")
         .setTitle('Bot Supports')
-        .setDescription("This guild is a help support for everyone that need help about main bots. We can discuss anything except againts the rules and mostly importantly have fun. Mainly, this server is used as a help server, where we talk about our main bots.")
-        .addField('Invite Link', "[Please click here](https://discord.gg/dfdvArY)")
-        .setImage("https://cdn.discordapp.com/attachments/248014822082347008/318314961518592001/Logo-Circle.png");
+        .setDescription("Aeris Bot Supports is a help support for everyone that need help about our main bots. We can discuss anything except againts the rules and mostly importantly have fun. Mainly, this server is used as a help server, where we talk about our main bots. We focus on tons of topics from gaming and coding, to NSFW and shitposting!")
+        .addField('Official Server of ModBot!', "```fix\nWe have great bot developers! That means:\n```\n :black_small_square: We have our own discord bots\n :black_small_square: Great bot qualities\n :black_small_square: And much more!")
+        .addField('Invite Link', "[Click Here](https://discord.gg/dfdvArY)")
+        .addField('For Mobile', "https://discord.gg/dfdvArY")
+        .setImage("http://quickbooksforinvestors.com/wp-content/uploads/2014/10/join-now11.gif");
         message.channel.sendEmbed(
             embed, {
                 disableEveryone: true
             }
         );
-} 
+}
