@@ -12,7 +12,7 @@ exports.run = (client, message, args) => {
             .setTimestamp()
             .addField('> Uptime', (Math.round(client.uptime / (1000 * 60 * 60))) + " hours, " + (Math.round(client.uptime / (1000 * 60)) % 60) + " minutes, and " + (Math.round(client.uptime / 1000) % 60) + " seconds")
             .addField('> General Stats', `• Servers: ${client.guilds.size}\n• Channels: ${client.channels.size}\n• Users: ${client.users.size}`, true)
-            .addField('> Working on', `• New Pando\'s commands, click this [Link to join](https://discord.gg/dfdvArY)`)
+            .addField('> Working on', `• New ModBot\'s commands, click this [Link to join](https://discord.io/aerisdiscord)`)
             .addField('> Update', '• More commands')
         message.channel.sendEmbed(
             embed, {
