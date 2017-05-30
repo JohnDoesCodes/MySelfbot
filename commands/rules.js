@@ -21,8 +21,8 @@ embed.addField("Aeris Discord!", "This guild is a help support for everyone that
 .addField("Rule 11", "Selfbots are permitted but userbots are not. the only difference between a selfbot and a user bot is a single line of code in your message handler.\n`if (message.author.id !== client.user.id) return`")
 .addField("Need Help?", "If you need help, ask in <#316597727691800580>  as it is most likely to be seen there. I or any helper/Mod/Server Staff will try to assist you. Feel free to openly approach us by mentioning the Supports, even in PM. However, we are busy a lot of the time, as currently each one of us has our own things to do, so spamming and impatience will lead to us getting angry.")
 .addField("Supports", "<@&280286202383302656>\n<@&300574970654752778> \n<@&280287389581312001>\n<@&299932471665885184>")
-.timestamp()
 .setImage("http://quickbooksforinvestors.com/wp-content/uploads/2014/10/join-now11.gif")
+.timestamp()
 message.channel.sendEmbed(
             embed, {
                 disableEveryone: true
