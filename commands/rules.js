@@ -23,7 +23,7 @@ embed.addField("Aeris Discord!", "This guild is a help support for everyone that
 .addField("Supports", "<@&280286202383302656>\n<@&300574970654752778> \n<@&280287389581312001>\n<@&299932471665885184>")
 .addField("Our non expiring invite", "https://discord.io/aerisdiscord")
 .setColor("#53A6F3")
-.setImage("http://quickbooksforinvestors.com/wp-content/uploads/2014/10/join-now11.gif")
+.setImage("https://cdn.discordapp.com/attachments/301425329963270154/319121512177074176/obey_the_rules.jpg")
 message.channel.sendEmbed(
             embed, {
                 disableEveryone: true
