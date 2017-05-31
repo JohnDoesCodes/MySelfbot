@@ -30,21 +30,6 @@ const log = message => {
     console.log("I\'m ready asf!");
 };
 
-client.commands = new Discord.Collection();
-client.aliases = new Discord.Collection();
-fs.readdir('./commands/', (err, files) => {
-  if (err) console.error(err);
-  log(`Loading a total of ${files.length} commands.`);
-  files.forEach(f => {
-    let props = require(`./commands/${f}`);
-    log(`Loading Command: ${props.help.name}. 👌`);
-    client.commands.set(props.help.name, props);
-    props.conf.aliases.forEach(alias => {
-      client.aliases.set(alias, props.help.name);
-    });
-  });
-});
-
 var reload = (message, cmd) => {
 	delete require.cache[require.resolve('./commands/' + cmd)];
 	try {
