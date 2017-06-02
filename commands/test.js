@@ -8,7 +8,7 @@ embed.setColor(0xFF0e44)
 .addField('Purge - Clear', 'Purge messages in the channel. Clear your own messages in the channel.', true)
 .addField('Setgame - Stream', 'Set a game status. Set a streaming status', true)
 .addField('Eval', 'Evaluate code in JavaScript', true)
-.setThumbnail(self.user.displayAvatarURL)
+.setThumbnail(client.user.displayAvatarURL)
 .setFooter('Selfbot Made By Leera#0037')
 .setTimestamp();
 message.channel.send({ embed }).then(msg => msg.delete(30000));
