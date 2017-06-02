@@ -8,7 +8,7 @@ message.delete();
 if(!option) 
 var embed = new Discord.RichEmbed();
 // embed.setColor(0xFF0e44)
-embed.setAuthor('Selfbot Help | Catagories')
+embed.setAuthor('Selfbot Help', 'Catagories')
 .addField('Utility', 'Utility commands', true)
 .addField('Moderation', 'Moderation Commands', true)
 .setDescription(`Type \`${prefix}\`help [catagory] for more help.`)
@@ -19,7 +19,7 @@ message.channel.send({ embed })
 if (option.toLowerCase() === "moderation") {
 var embed2 = new Discord.RichEmbed();    
 // embed2.setColor(0xFF0e44)
-embed.setAuthor('Selfbot Help | Sometext here')
+embed.setAuthor('Selfbot Help', 'Sometext here')
 .addField('Ping', 'Sends a response to the websocket and the latency back to the discord channel.', true)
 .addField('Purge - Clear', 'Purge messages in the channel. Clear your own messages in the channel.', true)
 .addField('Setgame - Stream', 'Set a game status. Set a streaming status', true)
@@ -32,7 +32,7 @@ message.channel.send({ embed2 })
 if (option.toLowerCase() === "utility") {     
 var embed3 = new Discord.RichEmbed();    
 // embed3.setColor(0xFF0e44)
-embed.setAuthor('Selfbot Help | Sometext here')
+embed.setAuthor('Selfbot Help', 'Sometext here')
 .addField('Ping', 'Sends a response to the websocket and the latency back to the discord channel.', true)
 .addField('Purge - Clear', 'Purge messages in the channel. Clear your own messages in the channel.', true)
 .addField('Setgame - Stream', 'Set a game status. Set a streaming status', true)
@@ -45,7 +45,7 @@ message.channel.send({ embed3 })
 if (option.toLowerCase() === "test") {
 var embed4 = new Discord.RichEmbed();    
 // embed4.setColor(0xFF0e44)
-embed.setAuthor('Selfbot Help | Sometext here')
+embed.setAuthor('Selfbot Help', 'Sometext here')
 .addField('Ping', 'Sends a response to the websocket and the latency back to the discord channel.', true)
 .addField('Purge - Clear', 'Purge messages in the channel. Clear your own messages in the channel.', true)
 .addField('Setgame - Stream', 'Set a game status. Set a streaming status', true)
