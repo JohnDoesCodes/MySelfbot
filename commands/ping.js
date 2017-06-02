@@ -4,8 +4,11 @@ exports.run = (client, message, args) => {
 
   message.delete();
   if(!option) 
-  message.channel.sendMessage("Pong")
-if (option.toLowerCase() === "help") {
-message.channel.send("Ping: use to check if bot is alive.")
-        }
+  message.channel.sendMessage("Pong!")
 }
+
+exports.help = {
+  name: 'help',
+  description: 'Displays all the available commands for your permission level.',
+  usage: 'help [command]'
+};
