@@ -9,5 +9,5 @@ exports.run = (client, message, args) => {
             embed, {
                 disableEveryone: true
             }
-        ); 
+        ).then(message => message.delete(30000));
 }
