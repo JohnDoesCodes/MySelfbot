@@ -13,5 +13,5 @@ message.channel.sendEmbed(
             embed, {
                 disableEveryone: true
             }
-        ).then(message => message.delete(25000));
+        ).then(message => message.delete(10000));
 } 
