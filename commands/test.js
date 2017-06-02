@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
 let option = message.content.split(' ').splice(1).join(' ');
-let config = require('../config');
-let prefix = config.prefix;
+// let config = require('../config');
+// let prefix = config.prefix;
 
 message.delete();
 if(!option) 
