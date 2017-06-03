@@ -10,14 +10,14 @@ idle: 0xddc318,
 dnd: 0xdd1717
 };*/
 
-m.delete();  
+message.delete();  
     
 let args = message.content.split(' ').slice(1).join(' ');
-self.user.setGame(`${args}`, "https://twitch.tv/twitch");
+client.user.setGame(`${args}`, "https://twitch.tv/twitch");
 //m.edit(`Stream status has been set as \`${args}\``).then(msg => msg.delete(1000));
 let embed = new Discord.RichEmbed();
 embed.setColor(online || idle | dnd)
-.setAuthor('Leera Selfbot | Status', self.user.displayAvatarURL)
+.setAuthor('Leera Selfbot | Status', client.user.displayAvatarURL)
 .addField('Status', `You are now ${args}`)
 //.setThumbnail('https://maxcdn.icons8.com/Share/icon/Logos//twitch1600.png')
 .setFooter('Selfbot Status')
