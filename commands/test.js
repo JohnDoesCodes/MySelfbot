@@ -22,5 +22,5 @@ embed.setColor(online || idle | dnd)
 //.setThumbnail('https://maxcdn.icons8.com/Share/icon/Logos//twitch1600.png')
 .setFooter('Selfbot Status')
 .setTimestamp();
-m.channel.send({ embed });
+message.channel.send({ embed });
 };    
