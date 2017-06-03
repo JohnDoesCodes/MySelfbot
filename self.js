@@ -16,7 +16,7 @@ require('./util/eventLoader')(client);
 //                                        //
 //                                        //
 ////////////////////////////////////////////
-
+ 
 process.on('uncaughtException', function(err) {
     console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE BOT FROM CRASHING
 });
