@@ -12,7 +12,7 @@ dnd: 0xdd1717
 
 m.delete();  
     
-let args = m.content.split(' ').slice(1).join(' ');
+let args = message.content.split(' ').slice(1).join(' ');
 self.user.setGame(`${args}`, "https://twitch.tv/twitch");
 //m.edit(`Stream status has been set as \`${args}\``).then(msg => msg.delete(1000));
 let embed = new Discord.RichEmbed();
