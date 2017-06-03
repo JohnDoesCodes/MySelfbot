@@ -1,14 +1,9 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
-  let option = message.content.split(' ').splice(1).join(' ');
-
   message.delete();
-  if(!option) 
-  message.channel.sendMessage("Pong!")
+   startTime = Date.now();
+        message.channel.sendMessage("Pinging...").then((message) => {
+            endTime = Date.now();
+            message.edit(`Pong! \`${Math.round(endTime - startTime)}ms\``);
+        });
 }
-
-exports.help = {
-  name: 'help',
-  description: 'Displays all the available commands for your permission level.',
-  usage: 'help [command]'
-};
