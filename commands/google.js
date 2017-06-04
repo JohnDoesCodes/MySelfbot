@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 var request = require('request');
 exports.run = (client, message, args) => {
-let res = await message.channel.send(`:mag: \`${args}\`...`);
+let res = message.channel.send(`:mag: \`${args}\`...`);
       request(`https://www.googleapis.com/customsearch/v1?key=AIzaSyDu7_tL50kfEcegjXnYqfBxXrKqBrknkkY&cx=013036536707430787589:_pqjad5hr1a&q=${args}&alt=json`, function(error, response, body) {
           if (!error && response.statusCode == 200) {
               var kek = JSON.parse(body)
