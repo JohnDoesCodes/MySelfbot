@@ -6,7 +6,7 @@ let res = message.channel.send(`:mag: \`${args}\`...`);
           if (!error && response.statusCode == 200) {
               var kek = JSON.parse(body)
               //message.edit(`:mag: \`${args}\` **${kek.items[0].title}**\n__<${kek.items[0].link}>__\n${kek.items[0].snippet}`);
-              res.edit({embed: {
+              message.edit({embed: {
                 author: {name: `${args} - Google Search`, icon_url: `https://shady.world/assets/google.jpg`},
                 description: `[**${kek.items[0].title}**](${kek.items[0].link})\n\n${kek.items[0].snippet}`,
                 color: 0xffffff,
