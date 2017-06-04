@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+var Jimp = require('jimp')
 exports.run = (client, message, args) => {
 if (message.mentions.users.size === 0) {
       const res = message.channel.send(':gear: generating...')
