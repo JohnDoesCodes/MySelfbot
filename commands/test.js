@@ -9,11 +9,12 @@ const res = client.users.filter(u => u.discriminator === `${args}`).map(u => u.u
                 disableEveryone: true
             }
         );
-  }
+  } else {
         embed.setDescription(`:mag_right: __**${res.length} users found with the discriminator ${args}**__:\n\n${res.join('\n')}`)
   message.channel.sendEmbed(
             embed, {
                 disableEveryone: true
             }
         );
+  }
 }
