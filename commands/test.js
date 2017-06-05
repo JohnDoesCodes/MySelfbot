@@ -10,7 +10,7 @@ embed.setDescription(`No users found with ${args}`)
 .setTimestamp();
   message.channel.send({ embed })
   } else {
-embed.setDescription(`Users Found With ${args}`, res)           
+embed.setDescription(`Users Found With ${args}\n\n${res.join('\n')}`, res)           
 .setAuthor('Leera Selfbot | Discrim Seeker', client.user.displayAvatarURL)
 .setColor(0xFF0ed4)
 .setTimestamp();
