@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
+    message.delete()
 const res = client.users.filter(u => u.discriminator === `${args}`).map(u => u.username)
   if(res.length === 0) {
   embed.setDescription(`:x: **No users found matching discriminator ${args}.**`)
