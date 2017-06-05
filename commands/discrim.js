@@ -13,7 +13,7 @@ const res = client.users.filter(u => u.discriminator === `${args}`).map(u => u.u
             }
         );
   } else {
-        embed.setDescription(`:mag_right: __**${res.length} users found with the discriminator ${args}**__:\n\n${res.join('\n')}`)
+        embed.setDescription(`:mag_right: __**${res.length} users found with ${args}**__:\n\n${res.join('\n')}`)
         .setAuthor('aeris#0018 Selfbot | Discrim Search', client.user.displayAvatarURL)
         .setColor("#2F79E2")
   message.channel.sendEmbed(
