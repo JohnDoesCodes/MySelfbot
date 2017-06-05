@@ -6,6 +6,7 @@ const res = client.users.filter(u => u.discriminator === `${args}`).map(u => u.u
   if(res.length === 0) {
   embed.setDescription(`:x: **No users found matching discriminator ${args}.**`)
   .setColor("#AB1212")
+  .setFooter(`$https://cdn.discordapp.com/attachments/306434811516682240/321289769424257024/Nepgear.png`, "aeris#0018 Selfbot")
   message.channel.sendEmbed(
             embed, {
                 disableEveryone: true
