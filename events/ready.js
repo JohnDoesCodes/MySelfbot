@@ -3,6 +3,7 @@ module.exports = (client, message) => {
 	 //let games = [`https://discord.io/aerisdiscord`, `https://discord.gg/dfdvArY`];
        //setInterval(() => {
 		//   client.user.setGame(games[Math.floor(Math.random() * games.length)], 'https://twitch.tv/aeriscodes')
-        client.user.setGame('JavaScript')
+        const args = message.content.split(' ').slice(1).join(' ');
+        client.user.setGame(`${args}`)
  //}, 12000)
 };
