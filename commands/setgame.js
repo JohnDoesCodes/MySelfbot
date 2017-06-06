@@ -11,4 +11,4 @@ embed.setDescription(`Your game has been set to \`${args}\``)
                 disableEveryone: true
             }
         );
-} 
+}
