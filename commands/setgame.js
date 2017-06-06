@@ -1,4 +1,5 @@
 const Discord = require("discord.js");
+var embed = new Discord.RichEmbed();
 exports.run = (client, message) => {
 const args = message.content.split(' ').slice(1).join(' ');
 client.user.setGame(`${args}`);
