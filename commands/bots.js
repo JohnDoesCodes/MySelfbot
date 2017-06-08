@@ -11,7 +11,7 @@ exports.run = (client, message, args) => {
         .addField('Official Server of ModBot!', "```fix\nWe have great bot developers! That means:\n```\n :black_small_square: We have our own discord bots\n :black_small_square: Great bot qualities\n :black_small_square: And much more!")
         .addField('Invite Link', "[Click Here](https://discord.io/aerisdiscord)", true)
         .addField('For Mobile', "https://discord.gg/dfdvArY", true)
-        .setImage("http://quickbooksforinvestors.com/wp-content/uploads/2014/10/join-now11.gif");
+        .setImage("https://cdn.discordapp.com/attachments/280289168544759808/322333628732538880/Aeris_Discord_banner.png");
         message.channel.sendEmbed(
             embed, {
                 disableEveryone: true
