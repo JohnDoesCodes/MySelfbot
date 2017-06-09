@@ -20,9 +20,9 @@ message.channel.send('**Searching...**')
           return message.client.util.embed(url, page.title, `${page.extract.substring(0, 500)}... [Read more](${url.replace(/\(/, '%28').replace(/\)/, '%29')})`);
         })
         .then((embed) => message.edit({ embed }))
-        .catch((err) => {
-          message.client.error(err);
+        // .catch((err) => {
+        //   message.client.error(err);
           message.edit('**No results found!**');
-        });
+        // });
 });
 }
