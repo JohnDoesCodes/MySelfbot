@@ -1,6 +1,6 @@
 const Discord = require('Discord.js');
 const randomcolor = require('randomcolor');
-
+var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 
     var user = message.mentions.users.first();
@@ -9,7 +9,6 @@ exports.run = (client, message, args) => {
 
         message.delete();
 
-        var embed = new Discord.RichEmbed();
 
         embed.setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL}`)
         .setDescription('Specify a user.')
@@ -31,7 +30,6 @@ var kill = ['CodingLife has been summoned and shot ', 'CodingLife has been summo
 
         message.delete();
 
-        var embed = new Discord.RichEmbed();
 
         embed.setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL}`)
         .setDescription(kill[~~(Math.random() - kill.length)] + user)
