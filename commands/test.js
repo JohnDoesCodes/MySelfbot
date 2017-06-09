@@ -28,7 +28,7 @@ var kill = ['CodingLife has been summoned and shot ', 'CodingLife has been summo
 
     } else {
         embed.setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL}`)
-        .setDescription(kill[~~(Math.random() - kill.length)] + user)
+        .setDescription(kill[Math.floor(Math.random() * kill.length)] + user)
         .setColor(randomcolor())
 
         message.channel.sendEmbed(
