@@ -1,21 +1,42 @@
-const STATUS_MAP = {
-  online: '<:vpOnline:212789758110334977>',
-  idle: '<:vpAway:212789859071426561>',
-  offline: '<:vpOffline:212790005943369728>',
-  dnd: '<:vpDnD:236744731088912384>',
-  streaming: '<:vpStreaming:212789640799846400>',
-};
+const superagent = require('superagent');
 
-const SORT_MAP = { online: 1, idle: 2, streaming: 3, dnd: 4, offline: 5, invisible: 6 };
+const conditionMap = {
+  'clear-night': '🌝',
+  'partly-cloudly-night': '🌝',
+  rain: '🌧',
+  snow: '🌨',
+  sleet: '🌨',
+  fog: '🌫',
+  wind: '🌬',
+  cloudy: '☁',
+};
 
 const Discord = require("discord.js");
 exports.run = (message, args) => {
-const client = message.client;
-    message.guild.fetchMembers().then(() => {
-      const mods = message.guild.members.array()
-        .filter(m => !m.user.bot && client.util.isStaff(m))
-        .sort((a, b) => SORT_MAP[a.presence.status] - SORT_MAP[b.presence.status])
-        .map(m => `${STATUS_MAP[m.presence.status]} **${m.user.username}#${m.user.discriminator}**`);
-      message.channel.send([`Mods for **${message.guild.name}**`].concat(mods));
-});
+if (!message.content) return message.channel.send('`Invalid Location!`');
+    const client = message.client;
+    // eslint-disable-next-line
+    const mapsUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${message.content.split(' ').join('+')}&key=${client.config.google.mapsKey}`;
+    let res = await superagent.get(mapsUrl);
+    if (!res.body.results[0]) return message.channel.send('`Invalid Location!`');
+    const geocode = [res.body.results[0].geometry.location.lat, res.body.results[0].geometry.location.lng].join(',');
+    const fullName = res.body.results[0].formatted_address;
+    // eslint-disable-next-line
+    res = await superagent.get(`https://api.darksky.net/forecast/${client.config.weather.forecastKey}/${geocode}?units=si`);
+    const data = res.body;
+    const condition = data.currently.summary;
+    const icon = data.currently.icon;
+    const chanceofrain = Math.round((data.currently.precipProbability * 100) / 5) * 5;
+    const temperature = Math.round(data.currently.temperature * 10) / 10;
+    const feelslike = Math.round(data.currently.apparentTemperature * 10) / 10;
+    const humidity = Math.round(data.currently.humidity * 100);
+    const windspeed = data.currently.windSpeed;
+    const final = `${icon in conditionMap ? conditionMap[icon] : ''} __${fullName}__
+**Conditions**: ${condition}
+**Temp**: ${temperature} °C
+**Feels Like**: ${feelslike} °C
+**Humidity**: ${humidity}%
+**Chance of Rain**: ${chanceofrain}%
+**Windspeed**: ${windspeed}Kts`;
+message.channel.send(final);
 }
