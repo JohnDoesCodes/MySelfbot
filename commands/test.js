@@ -9,7 +9,6 @@ const STATUS_MAP = {
 const SORT_MAP = { online: 1, idle: 2, streaming: 3, dnd: 4, offline: 5, invisible: 6 };
 
 const Discord = require("discord.js");
-const request = require('request');
 exports.run = (message, args) => {
 const client = message.client;
     message.guild.fetchMembers().then(() => {
