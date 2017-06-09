@@ -1,41 +1,27 @@
-const superagent = require('superagent');
-
-const conditionMap = {
-  'clear-night': '🌝',
-  'partly-cloudly-night': '🌝',
-  rain: '🌧',
-  snow: '🌨',
-  sleet: '🌨',
-  fog: '🌫',
-  wind: '🌬',
-  cloudy: '☁',
-};
-
 const Discord = require("discord.js");
-exports.run = (client, message, args) => {
-if (!message.content) return message.channel.send('`Invalid Location!`');
-    // eslint-disable-next-line
-    const mapsUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${message.content.split(' ').join('+')}&key=${client.config.google.mapsKey}`;
-    let res = superagent.get(mapsUrl);
-    if (!res.body.results[0]) return message.channel.send('`Invalid Location!`');
-    const geocode = [res.body.results[0].geometry.location.lat, res.body.results[0].geometry.location.lng].join(',');
-    const fullName = res.body.results[0].formatted_address;
-    // eslint-disable-next-line
-    res = superagent.get(`https://api.darksky.net/forecast/${client.config.weather.forecastKey}/${geocode}?units=si`);
-    const data = res.body;
-    const condition = data.currently.summary;
-    const icon = data.currently.icon;
-    const chanceofrain = Math.round((data.currently.precipProbability * 100) / 5) * 5;
-    const temperature = Math.round(data.currently.temperature * 10) / 10;
-    const feelslike = Math.round(data.currently.apparentTemperature * 10) / 10;
-    const humidity = Math.round(data.currently.humidity * 100);
-    const windspeed = data.currently.windSpeed;
-    const final = `${icon in conditionMap ? conditionMap[icon] : ''} __${fullName}__
-**Conditions**: ${condition}
-**Temp**: ${temperature} °C
-**Feels Like**: ${feelslike} °C
-**Humidity**: ${humidity}%
-**Chance of Rain**: ${chanceofrain}%
-**Windspeed**: ${windspeed}Kts`;
-message.channel.send(final);
+exports.run = (client, message) => {
+message.channel.send('**Searching...**')
+      .then((message) => {
+        snekfetch.get(
+          `https://en.wikipedia.org/w/api.php?action=query&list=search&srwhat=text&srprop=sectionsnippet&format=json&srsearch=${message.content}`
+        )
+        .then((res) => res.body.query.search)
+        .then((results) => {
+          if (!results[0]) return Promise.reject('NO RESULTS');
+          return results[0];
+        })
+        .then((result) => snekfetch.get(
+          `https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&exintro=&explaintext=&titles=${encodeURIComponent(result.title)}`
+        ))
+        .then((res) => res.body.query.pages[Object.keys(res.body.query.pages)])
+        .then((page) => {
+          const url = `https://wikipedia.org/wiki/${encodeURIComponent(page.title)}`;
+          return message.client.util.embed(url, page.title, `${page.extract.substring(0, 500)}... [Read more](${url.replace(/\(/, '%28').replace(/\)/, '%29')})`);
+        })
+        .then((embed) => message.edit({ embed }))
+        .catch((err) => {
+          message.client.error(err);
+          message.edit('**No results found!**');
+        });
+});
 }
