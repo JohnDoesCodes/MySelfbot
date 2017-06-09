@@ -1,4 +1,4 @@
-const Discord = require('Discord.js');
+const Discord = require("discord.js");
 const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
