@@ -12,9 +12,8 @@ const conditionMap = {
 };
 
 const Discord = require("discord.js");
-exports.run = (message, args) => {
+exports.run = (client, message, args) => {
 if (!message.content) return message.channel.send('`Invalid Location!`');
-    const client = message.client;
     // eslint-disable-next-line
     const mapsUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${message.content.split(' ').join('+')}&key=${client.config.google.mapsKey}`;
     let res = superagent.get(mapsUrl);
