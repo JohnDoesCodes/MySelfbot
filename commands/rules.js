@@ -18,7 +18,7 @@ embed.addField("Ladyback Cafe", "Want a server where you can hang and chat? layb
 .addField("Rule 9", "Do not advertise other servers unless you were given permission, If any staff members are abusing their permissions report to it to me.")
 .addField("Rule 10", "No cool dogs. (insta ban)")
 .addField("Rule 11", "Selfbots are permitted but userbots are not. the only difference between a selfbot and a user bot is a single line of code in your message handler.\n`if (message.author.id !== client.user.id) return`")
-.addField("Our non expiring invite", "https://discord.gg/6SZnUbG")
+.addField("Our non expiring invite", "https://discord.gg/gTxVDd")
 .setColor("#53A6F3")
 .setImage("https://cdn.discordapp.com/attachments/301425329963270154/319121512177074176/obey_the_rules.jpg")
 message.channel.sendEmbed(
