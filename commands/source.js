@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
     var embed = new Discord.RichEmbed();
     embed.setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL}`)
     .setTimestamp()
-    .addField('Info', 'This selfbot is multipurposed bot owns by aeris#2800.')
+    .addField('Info', 'This selfbot is multipurposed bot owns by aeris#0018.')
     .addField('Github Source', `Click this [link](https://github.com/JohnDoesCodes) for the selfbot codes.`);
 message.channel.sendEmbed(
             embed, {
