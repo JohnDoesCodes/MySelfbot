@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
 var embed = new Discord.RichEmbed();
-embed.addField("Ladyback Cafe", "Want a server where you can hang and chat? You found the place "This is the place (Use if for partner message)". layback cafe is a place where you hang and chat. the rules are complex and basic. Thanks for joining  and have fun.")
+embed.addField("Ladyback Cafe", "Want a server where you can hang and chat? You found the place **This is the place (Use if for partner message)**. layback cafe is a place where you hang and chat. the rules are complex and basic. Thanks for joining  and have fun.")
 .addField("Be respectful", "There's no reason to be insulting. Understand the difference between banter and insults. Any and all signs of disrespect will not be tolerated. Mods/Staff have the right to punish accordingly. 👈 👌 \nBeing obnoxious, annoying, childish, or a general attention seeker can you get you kicked without warning subjective to the secret police.")
 .addField("The list of \"Don't\" -s", "-Don't Text spam or COMPLETLY CONTROL THE MIC or you can get muted. 👎\n-Don't advertise servers or anything else unless asked, even through PMs. 👎\n-Don't have an offensive name or avatar and keep a legible name or nickname. 👎\n")
 .addField("Channels", "The general is where all members conversation take place. The Bot Commands is where all bot commands go.")
