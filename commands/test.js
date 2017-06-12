@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("D4RK Nation", "https://cdn.discordapp.com/icons/296993353135030272/0d066e645c3c4ba444f76315aa7c086c.jpg")
-.setDescription("Great community and staff for all your GTA V modding needs we do recoveries and are currently working on a menu our selves . Or if you wanna just talk and chill in our server.\nWe are currently at 500+ users and looking to expand")
+embed.setAuthor("My Chemical Piløts at the Disco with Fall Out Boys", "https://cdn.discordapp.com/icons/299942051636576257/91f47be29dafd0a9d75e1d12713cebf4.jpg")
+.setDescription("We are a gr8 community server based on all sorts off topics, We have multiple channels and roles for you to enjoy, and have friendly staff, enough rooms to talk about everything you want, and we’re always open for suggestions and how to improve our server. Click The Link! Link to discord ")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/pP6pvcm")
+.addField("Server Invite", "https://discord.gg/8m8yRf3")
 message.channel.send({embed})
 }
