@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Lilium Ent", "https://cdn.discordapp.com/icons/309758424487559178/4b6d6dc043cf8ed2616d2070d9dee570.jpg")
-.setDescription("A server dedicated to lesbian themed media; animation and comics (Manga/Manhwa/Manhua), games, movies and other means of entertainment. We may focus on this genre, but we have a lot more things: Waifus, Grambling, RPG, Roleplay, Gaming, ETC! Oh! And we also have radioactive cookies.")
+embed.setAuthor("Kermits Crib", "https://images-ext-1.discordapp.net/external/VZAA91ojLaX2Qi0QZFaPqlACwWKnghBFXVfL_8s1lY8/%3Fwidth%3D54%26height%3D54/https/images-ext-2.discordapp.net/.eJwFwdsNgCAMAMBdGICi2ApuA6W-okIEv4y7e_eq5z7UpNbWSp0AOF06bZXznUIpmvMJG-ergu161zuyaHAYLVrqAGOMQpgMB8_ezIPMgSS64Ei8F9R7WdT3AxAyHlU.iCmmtW9LnS3MI15u_BHT0XDrBa8?width=41&height=41")
+.setDescription("We're a small community, growing bigger and bigger.\nYou can advertise your own discord links in our server, to make your server grow bigger!\nHere are the best things about the server\n\n- Non toxic.\n- Growing community.\n- We're not super strict.\n- Get a free role upon invitation to friends.\n- Talk about a bunch of stuff.\n- 100+ Members\n- Great Staff")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/mhwrw6R")
+.addField("Server Invite", "https://discord.gg/7Fgm6Tt")
 message.channel.send({embed})
 }
