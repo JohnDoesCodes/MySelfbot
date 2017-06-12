@@ -3,10 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor(" Pancake", "https://cdn.discordapp.com/icons/236902633430974464/23738724ab8eec30395a09a43551813f.jpg")
-.setDescription("is your server lacking fun? are you looking for something to keep you entertained for hours? then this bot is for you! Pancake is a cool fun bot that has so many features to keep you and your members entertained in your server. Not only does pancake provide entertainment, but you can also use it to moderate your server! Pancake always has updates for quality or more commands. We also love some feedback and some command suggestions. Are you interested yet? come and check it out here: ")
+embed.setAuthor("The Phoenix Circle", "https://cdn.discordapp.com/icons/273460516599627779/ceeaf35ccdb8a56fb69c65c3d9242945.jpg")
+.setDescription("Its the place for everyone ! Lets grow our community globally , making friends from corners , enjoying with each other ! Gaming , movies , anime , animal lovers , music etc. everything goes here ! It got cool bots too ! Also has a server bank :P Join the circle now!")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/DwNYNPz")
-.addField("Bot Invite", "https://discordapp.com/oauth2/authorize?=&client_id=239631525350604801&scope=bot&permissions=301001751")
+.addField("Server Invite", "https://discord.gg/RzSn9G9")
 message.channel.send({embed})
 }
