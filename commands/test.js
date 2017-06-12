@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Popo's Bedroom", "https://cdn.discordapp.com/icons/303024884764770304/30402376e58f0d55854467fa9ce63251.jpg")
-.setDescription("We are an Anime server that enjoy all types of animes, but we are mainly based on Dragon Ball.\nWe do events such as Dragon ball RP and stream games together, and watch Dragon ball Super together every Saturday Night.\nWe do talk about anything that may interest you in any way, so please come along and enjoy yourself.")
+embed.setAuthor("Reddit Tech", "https://cdn.discordapp.com/attachments/309681105202708481/319665788661399552/banner.png")
+.setDescription("Are you interested in technology? Want to discuss your PC build with others, or anything else tech related? Just want to hang out with fellow PCMasterRace people? Then Reddit Tech is the place for you!")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/ZcHAXwf")
+.addField("Server Invite", "https://discord.gg/WS5DadN")
 message.channel.send({embed})
 }
