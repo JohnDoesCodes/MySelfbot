@@ -3,10 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Snail Racing", "https://cdn.discordapp.com/icons/204621105720328193/6c44c0fcd3aa3864e77a66112584f99d.jpg")
-.setDescription("Snail Racing is a Discord bot which allows you to run exciting races with people in your server, collect neat items, soar server item and level leaderboards, hoard rupees and earn admin-assigned roles. Watch out for traps and beat your server's members in snail races!")
+embed.setAuthor("Maid Cafe And Smoothie Shop", "https://cdn.discordapp.com/icons/299669140434845697/6abb0e9ca6bbdbf296ae4917bb6fe3ba.jpg")
+.setDescription("Chill out at the ever growing Maid Cafe! With fun events, role playing, and a lot of discussions. We are a server for all people, of all ages. This Maid Cafe aims to be one of the most active, growing servers that can be a place for all, free from mod abuse. Join today!")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/ZB82NjS")
-.addField("Bot Invite", "https://discordapp.com/oauth2/authorize?client_id=256556410031046657&scope=bot&permissions=19457")
+.addField("Server Invite", "https://discord.gg/Mf6M9MT")
 message.channel.send({embed})
 }
