@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Monkey Clubhouse", "https://cdn.discordapp.com/icons/289863074800861195/d8a127827f23e15f59b230e964cb5421.jpg")
-.setDescription("A gaming community. that plays League Of Legends, CSGO, Overwatch, Pubg. We have an Anime Community that is quite NSFW. Dont Worry if your not into the NSFW stuff we have a weeb area just for weebs ;). We are quite toxic. But if you want to have fun chatting shit to some guys/GRILLS across the internet. THIS IS THE PLACE! ")
+embed.setAuthor("Whis 🍜", "https://cdn.discordapp.com/icons/280074405571330049/56fc3b8b638828176577c3ec2cdd0ca4.jpg")
+.setDescription("This server is powered up by and handled by ♪ @!♪ Whis Wee ♪:ramen:#7451 , but all final decisions/changes (actually everything) are @!♪ Whis Wee ♪:ramen:#7451 ")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/6NMcjpz")
+.addField("Server Invite", "https://discord.gg/XuP2sCg")
 message.channel.send({embed})
 }
