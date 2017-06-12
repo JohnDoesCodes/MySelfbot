@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Night Sanity 2.0", "https://cdn.discordapp.com/icons/321240840209039370/d6fcb3b09855e980cca70fcb5e2deb00.jpg")
-.setDescription("Hello and Welcome to (Night Sanity 2.0) Discord Server.\n- We're are starting off fresh and new.  This is a FULLY (NSFW,Gaming,Socialize)server. This server is split into 3 full servers meaning you ma choose ful nsfw,gamin or socialize. We have all sorts of channels. We have few voice chats also do it yourself bots to help you learn about the server. We also do Giveaways, you can view that in the do it yourself bot. We plan to grow big within few days as i will be regathering from my old server.")
+embed.setAuthor("Gamer's Community", "https://cdn.discordapp.com/icons/306485688390647812/50ba7cdae1a9e4072635fe7c5584af33.jpg")
+.setDescription("A place to find friends, gamers and other interesting people to get along with.\nWe discuss about anything & everything, there's also cool activities for everyone. \nNeed any help? Well, there's always someone who could help you with whatever you need. \nWe have some of the best youtubers, gamers, developers, graphic designers, music producers and more. \nIf you're interested please feel free to join as we look forward in meeting new people")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/nV3DCSH")
+.addField("Server Invite", "https://discord.gg/YFXycQZ")
 message.channel.send({embed})
 }
