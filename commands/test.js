@@ -1,45 +1,11 @@
-// const Discord = require("discord.js");
-// const randomcolor = require('randomcolor');
-// var embed = new Discord.RichEmbed();
-// exports.run = (client, message, args) => {
-
-// var kill = ['CodingLife has been summoned and shot ', 'CodingLife has been summoned and brutally stabbed ', 'CodingLife has been and summoned hung ', 'CodingLife has been summoned and burned ', 'CodingLife has been summoned and sacrificed ', 'CodingLife has been summoned and beat '];
-
-//     var user = message.mentions.users.first();
-
-//     if(!user) {
-
-//         message.delete();
-
-
-//         embed.setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL}`)
-//         .setDescription('Specify a user.')
-//         .setColor(randomcolor())
-
-//         message.channel.sendEmbed(
-
-//           embed, {
-
-//             disableEveryon: true
-
-//           }
-
-//         );
-
-//     } else {
-//         embed.setAuthor(`${message.author.tag}`, `${message.author.displayAvatarURL}`)
-//         .setDescription(kill[Math.floor(Math.random() * kill.length)] + user)
-//         .setColor(randomcolor())
-
-//         message.channel.sendEmbed(
-
-//           embed, {
-
-//             disableEveryon: true
-
-//           }
-
-//         );
-//     }
-    
-// }
+const Discord = require("discord.js");
+const randomcolor = require('randomcolor');
+var embed = new Discord.RichEmbed();
+exports.run = (client, message, args) => {
+message.delete
+embed.setAuthor("ΙԲ עﾷȗ ΔЯﾼ ЯﾼΔdΙﾢɢ ȚￃΙଌ ΙȚଌ Țﾷ ﾤΔȚﾼ lel :)")
+.setDescription("This server is basically one of its kind. The discord has friendly people that'll welcome you and treat you like a family. This certain discord has many different and unique roles that you'll never be bored. It has a diverse community and many bots for your enjoyment. So join today!!")
+.addField("Server Invite", "https://discord.gg/NgU6EfT")
+.setColor(randomcolor)
+message.channel.send({embed})
+}
