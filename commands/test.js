@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Gaming and Chat", "https://cdn.discordapp.com/icons/293062194629705728/71c2169f71729b3a7869cc80374a7561.jpg")
-.setDescription("Welcome to my server its a cool server with alot of people to talk with we talk about anything in the server feel free to say anything and play any games you want while interacting with different kinds of people first read the rules and if you have some questions please contact me or the admins.We also have a site in wich we sell steam games in a cheap price if you want to buy a game contact sell idustry admins.\nYou can also post youre lewd pictures at the lewd channels with your favorite NSFW pics!")
+embed.setAuthor("Gamers House", "https://cdn.discordapp.com/icons/319618947894738961/0d68594fffa6459599cc31ee3af600ad.jpg")
+.setDescription("Welcome to Gamers House! We have things such as: > Friendly staff > Cool bots like Tatsumaki and Dyno! > and we allow advertising in our very own advertising channel! > we play a variety of games, on platforms such as steam, as well as playing mobile games too! > we partner with other servers, and we have 100+ members!  Come join!")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/VyMPnz3")
+.addField("Server Invite", "  https://discord.gg/dPDXZpg")
 message.channel.send({embed})
 }
