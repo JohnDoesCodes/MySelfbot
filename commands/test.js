@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("CrackingZone_Gaming", "https://cdn.discordapp.com/icons/283251838877433857/daed1d95fa2e03c1cbfc53d85462ccb5.jpg")
-.setDescription("Our Community Offers Uplay, Origin,Steam,Spotify,Netflix,Hulu premium accounts for free!!!\n\nWe also host 2 giveaways daily for our members!!!\n\nYou want more well we also offer direct links to HD movies and latest PC Games!!!!\n\nWe will keep you updated with latest gaming news and PC tech!!!")
+embed.setAuthor("Blocks Community", "https://cdn.discordapp.com/attachments/303099253260025858/310810037201141760/Blocks.png")
+.setDescription("Blocks community, a well growing community based on gamers, we support teams and games as well as minor communities! we have special bots(some are paid too) and reputed bots made for well moderation we have specific zones for specific nees like games chat, bots chat(yes we pay for cleverbots) and spam and nsfw too! this will be fun to join! why waiting? join and hangout with gamers!")
 .setColor(randomcolor())
-.addField("Server Invite", " https://discord.gg/3RajjsF")
+.addField("Server Invite", "https://discord.gg/CjNjRDZ")
 message.channel.send({embed})
 }
