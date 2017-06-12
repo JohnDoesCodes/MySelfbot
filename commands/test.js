@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Whis 🍜", "https://cdn.discordapp.com/icons/280074405571330049/56fc3b8b638828176577c3ec2cdd0ca4.jpg")
-.setDescription("This server is powered up by and handled by ♪ @!♪ Whis Wee ♪:ramen:#7451 , but all final decisions/changes (actually everything) are @!♪ Whis Wee ♪:ramen:#7451 ")
+embed.setAuthor("GamerHub", "https://cdn.discordapp.com/icons/298684497581572097/2c6f8db9bcef16178d9ae4fb4d0dbd82.jpg")
+.setDescription("Need a place to chill, talk ,game and make youtube videos? Well you should join #PomfCraft! This server is an flabbergasting way to chill and meet new people :family_mmg: !\nWe also have an amazing bot made by a developer named FrogBot :frog: , FrogBot can do many cool commands + has nsfw commands!")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/XuP2sCg")
+.addField("Server Invite", "https://discord.gg/RfzuBtw")
 message.channel.send({embed})
 }
