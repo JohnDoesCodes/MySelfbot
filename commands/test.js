@@ -3,8 +3,8 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("The Gay Squad!", "https://cdn.discordapp.com/icons/289482819347152896/b6bfe4e1bde7dd9411cd4039a13e4c2f.jpg")
-.setDescription("**__A place to be gay (or not) and enjoy the company of others!__**\n\nHere at the Gay Squad we have lots of events and a loving community!\nYou don't need to be gay to join, of course, so don't be scared!\n\nCome join us at the Gay Squad, you won't regret it! (:")
+embed.setAuthor("Kaos Krew", "https://cdn.discordapp.com/icons/310192676479959041/31e550fdac36ed0102fec739fd1cc0a2.jpg")
+.setDescription("Kaos Krew is a multi-platformed Gaming Community server with channels for everyone! We host Team Games aswell as events! Here you can meet new people, listen to music, discuss your favorite games, team up, and chill!")
 .setColor(randomcolor())
 .addField("Server Invite", "https://discord.gg/mxxbg8E")
 message.channel.send({embed})
