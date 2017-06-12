@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("/r/Overwatch_Memes", "https://cdn.discordapp.com/icons/292932955653931009/81c10c3728d08c8651991fa621f676cb.jpg")
-.setDescription("Do you love overwatch and dank memes? Well, /r/Overwatch_Memes is here providing some of the dank memes for you. We hit 50K readers and also 100+ members on discord on the first day of the Overwatch Anniversary! ")
+embed.setAuthor("Popo's Bedroom", "https://cdn.discordapp.com/icons/303024884764770304/30402376e58f0d55854467fa9ce63251.jpg")
+.setDescription("We are an Anime server that enjoy all types of animes, but we are mainly based on Dragon Ball.\nWe do events such as Dragon ball RP and stream games together, and watch Dragon ball Super together every Saturday Night.\nWe do talk about anything that may interest you in any way, so please come along and enjoy yourself.")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/ow")
+.addField("Server Invite", "https://discord.gg/ZcHAXwf")
 message.channel.send({embed})
 }
