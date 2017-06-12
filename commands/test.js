@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("My Chemical Piløts at the Disco with Fall Out Boys", "https://cdn.discordapp.com/icons/299942051636576257/91f47be29dafd0a9d75e1d12713cebf4.jpg")
-.setDescription("We are a gr8 community server based on all sorts off topics, We have multiple channels and roles for you to enjoy, and have friendly staff, enough rooms to talk about everything you want, and we’re always open for suggestions and how to improve our server. Click The Link! Link to discord ")
+embed.setAuthor("Lilium Ent", "https://cdn.discordapp.com/icons/309758424487559178/4b6d6dc043cf8ed2616d2070d9dee570.jpg")
+.setDescription("A server dedicated to lesbian themed media; animation and comics (Manga/Manhwa/Manhua), games, movies and other means of entertainment. We may focus on this genre, but we have a lot more things: Waifus, Grambling, RPG, Roleplay, Gaming, ETC! Oh! And we also have radioactive cookies.")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/8m8yRf3")
+.addField("Server Invite", "https://discord.gg/mhwrw6R")
 message.channel.send({embed})
 }
