@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Kaos Krew", "https://cdn.discordapp.com/icons/310192676479959041/31e550fdac36ed0102fec739fd1cc0a2.jpg")
-.setDescription("Kaos Krew is a multi-platformed Gaming Community server with channels for everyone! We host Team Games aswell as events! Here you can meet new people, listen to music, discuss your favorite games, team up, and chill!")
+embed.setAuthor("Waifus Kingdom", "https://cdn.discordapp.com/icons/303929603611820033/0b1016440c11098d38d6e3bc62d797e7.jpg")
+.setDescription("A place to feel at peace with the ways of the weaboo, A chill and entertaining community, as Well as local Waifu galleries to keep your laifu  away from the waifu")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/kkuFuap")
+.addField("Server Invite", "https://discord.gg/Qr3AZU6")
 message.channel.send({embed})
 }
