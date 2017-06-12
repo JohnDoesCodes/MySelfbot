@@ -8,4 +8,4 @@ embed.setAuthor("The Phoenix Circle ", "https://cdn.discordapp.com/icons/2842023
 .setColor(randomcolor())
 .addField("Server Invite", "https://discord.gg/RzSn9G9")
 message.channel.send({embed})
-}
+} 
