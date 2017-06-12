@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Café 0131+", "https://cdn.discordapp.com/icons/188752295108935680/c4bbb927dc5e289371ee54fc92a9a3a3.jpg")
-.setDescription("Café 0131+ With a dedicated Minecraft server, a weekly event schedule and occasional talks, it's easy to enjoy us! Join now to let this 500-member server back to its glory! ")
+embed.setAuthor("The Onigiri Hub", "https://cdn.discordapp.com/icons/300834407185514496/f65ea54e9f5d1760b4e6fb9f8b099967.jpg")
+.setDescription("Welcome to The Onigiri Hub, here we have good customers and have many free roles for each kind of Onigiri. We also have some story tellers who tells different kinds of story, along with brilliant staff members. We have radio bots along with a roleplay and gaming channel. Partnership is offered here, so do join and tell us if you want to be one!")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/013MqTM1p1qm52VcZ")
+.addField("Server Invite", "https://discord.gg/PJCMCwV")
 message.channel.send({embed})
 }
