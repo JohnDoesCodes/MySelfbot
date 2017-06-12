@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Coyote Cave | Coding HQ", "https://cdn.discordapp.com/icons/307230826545020928/f90e18ea95f15a955f30ba91a8dba1ba.jpg")
-.setDescription("Welcome to Coyote Cave | Coding HQ this is a chat for all coders around the world and a simple chat as well for my bot @Coyote | @CoyoteBeta.")
+embed.setAuthor("Café 0131+", "https://cdn.discordapp.com/icons/188752295108935680/c4bbb927dc5e289371ee54fc92a9a3a3.jpg")
+.setDescription("Café 0131+ With a dedicated Minecraft server, a weekly event schedule and occasional talks, it's easy to enjoy us! Join now to let this 500-member server back to its glory! ")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/CYusa2Y")
+.addField("Server Invite", "https://discord.gg/013MqTM1p1qm52VcZ")
 message.channel.send({embed})
 }
