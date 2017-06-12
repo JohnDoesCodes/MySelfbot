@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Teens Community", "https://cdn.discordapp.com/icons/306433739959828480/30b48cff2cd9fd66e7ed1329540c8b33.jpg")
-.setDescription("Hello and welcome to the teens community! :smiley: We hope you enjoy this server! Our main goal is to make this a server were everyone can have fun, socialize, meet others, talk to other teens who are going through the same things as you may be going through, support one another, and be crazy without regretting it :joy: We host plenty of events and have streams on Fridays. Come get in on the fun!")
+embed.setAuthor("ChillHub", "https://images-ext-1.discordapp.net/external/cxvgY6gPY5S4WwRV5kG21txff7sIovK_ASDWPi_nF68/https/cdn.discordapp.com/attachments/315878625071333376/318001270424076300/logo2.png")
+.setDescription("Need a place to get away and must hangout? Come and join ChillHub a great way to relax and meet new people. Come join us and play games and have generaly random discussions with other chill people.")
 .setColor(randomcolor())
-.addField("Server Invite", "https://discord.gg/zyAHdaJ")
+.addField("Server Invite", "https://discord.gg/PjY5xVc")
 message.channel.send({embed})
 }
