@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Gamers House", "https://cdn.discordapp.com/icons/319618947894738961/0d68594fffa6459599cc31ee3af600ad.jpg")
-.setDescription("Welcome to Gamers House! We have things such as: > Friendly staff > Cool bots like Tatsumaki and Dyno! > and we allow advertising in our very own advertising channel! > we play a variety of games, on platforms such as steam, as well as playing mobile games too! > we partner with other servers, and we have 100+ members!  Come join!")
+embed.setAuthor("Ascension - Anime & Gaming", "https://cdn.discordapp.com/icons/315826908212232194/17761254284fe00979f99f5b899d55ce.jpg")
+.setDescription("The greatest discord group for Otakus. We want all of the anime/manga/jpop or etc. lovers to unite in one place.\nBy the way, if you want to have a role on our server, always be active on our chatroom. Mee6, a bot responsible for leveling people up, shall appear to let you know what level you are.")
 .setColor(randomcolor())
-.addField("Server Invite", "  https://discord.gg/dPDXZpg")
+.addField("Server Invite", "https://discord.gg/ZKWsdBY")
 message.channel.send({embed})
 }
