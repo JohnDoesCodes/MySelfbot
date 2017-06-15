@@ -8,4 +8,4 @@ embed.setAuthor("Neko high", "https://cdn.discordapp.com/icons/31749927838364467
 .addField("Server Invite", "https://discord.gg/SuxK2KJ")
 .setColor(randomcolor())
 message.channel.send({embed})
-}
+} 
