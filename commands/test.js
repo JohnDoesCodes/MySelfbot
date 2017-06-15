@@ -3,12 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Discord News", "https://cdn.discordapp.com/icons/310477556015038465/b2478ee0ea497c4cade06c65cb79b92a.jpg")
-.setDescription("Discord News is a server dedicated to bring you the latest Discord news as soon as it happens. We have many staff members who write weekly articles about different things happening around Discord so you always have something to read! We also have a website, bot, and server, so you can subscribe to us however you want. Check our server or website, and subscribe to Discord News today!")
-.addField(" Join our server now!", "[Click here](https://discord.gg/NqYzzdv)", true)
-.addField("Check out our official website!", "[Click here](https://discordnews.ml/)", true)
-.setImage("https://images-ext-2.discordapp.net/external/Ncsq9y8njcnNnovHdPGPlxxf4Z58ABqjK2hZeeMydoI/https/cdn.discordapp.com/attachments/323285788764930048/323808047140962324/Discord_News_Banner.png")
-.setFooter("Have fun ❤") 
+embed.setAuthor("Neko high", "https://cdn.discordapp.com/icons/317499278383644672/b0900eaf7b7ad6fbcff556685eef9d1c.jpg")
+.setDescription("You may have come from the most wealthy families, you may come from the poorest of the poor. You and the others have many differences, but at this boarding school. We unite as one. This place is where supernatural, humans, angels and demons are harmonized and trained for battle. We are a fun community with tons of fun stuff to go too.")
+.addField("Server Invite", "https://discord.gg/SuxK2KJ")
 .setColor(randomcolor())
 message.channel.send({embed})
 }
