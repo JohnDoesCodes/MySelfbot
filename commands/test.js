@@ -3,9 +3,9 @@ const randomcolor = require('randomcolor');
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
 message.delete()
-embed.setAuthor("Neko high", "https://cdn.discordapp.com/icons/317499278383644672/b0900eaf7b7ad6fbcff556685eef9d1c.jpg")
-.setDescription("You may have come from the most wealthy families, you may come from the poorest of the poor. You and the others have many differences, but at this boarding school. We unite as one. This place is where supernatural, humans, angels and demons are harmonized and trained for battle. We are a fun community with tons of fun stuff to go too.")
-.addField("Server Invite", "https://discord.gg/SuxK2KJ")
+embed.setAuthor("Available Wrong Chat", "https://cdn.discordapp.com/icons/308776811741839370/6e4f4da6810ae294699b4809bc3f9876.jpg")
+.setDescription("Available Wrong Chat is a place to chill and hang out.\nEach role is given to a person based on how active they are with the server.\nYou can self assign roles to yourself with neat titles and what not.\nThe only thing the we won't be lenient with is other server links outside our partnership. \nSo please join and help get this community growing.")
+.addField("Server Invite", "https://discord.gg/RHUAhAU")
 .setColor(randomcolor())
 message.channel.send({embed})
 } 
