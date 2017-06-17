@@ -8,4 +8,4 @@ embed.setAuthor("Gamers House", "https://cdn.discordapp.com/icons/31961894789473
 .addField("Server Invite", "https://discord.gg/dPDXZpg")
 .setColor(randomcolor())
 message.channel.send({embed})
-} 
+}
