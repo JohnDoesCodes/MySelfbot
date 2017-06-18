@@ -23,4 +23,4 @@ exports.run = (client, message, args) => {
                 message.edit('No longer AFK').then(response => response.delete(1000).catch(error => console.log(error.stack)));
             }).catch(error => console.log(error.stack));
         }
-};
+}; 
