@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
 var embed = new Discord.RichEmbed();
+message.delete()
 embed.setAuthor("Colours", "https://cdn.discordapp.com/icons/280285147805384704/5e3a3f5a2a55921ccd7faa78386a3b4d.jpg")
 .setDescription("**__Red__**\n\n**__Cyan__**\n\n**__Black__**\n\n**__Pink__**\n\n**__Green__**\n\n**__Yellow__**")
 .setColor("#53A6F3")

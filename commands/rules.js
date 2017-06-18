@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
 var embed = new Discord.RichEmbed();
+message.delete()
 embed.addField("Aeris Discord!", "This guild is a help support for everyone that  need help about our main bots. We can discuss anything except againts the rules and mostly importantly have fun. Mainly, this server is used as a help server, where we talk about our main bots.")
 .addField("Be respectful", "There's no reason to be insulting. Understand the difference between banter and insults. Any and all signs of disrespect will not be tolerated. Mods/Staff have the right to punish accordingly. 👈 👌 \nBeing obnoxious, annoying, childish, or a general attention seeker can you get you kicked without warning subjective to the secret police.")
 .addField("The list of \"Don't\" -s", "-Don't Text spam or COMPLETLY CONTROL THE MIC or you can get muted. 👎\n-Don't advertise servers or anything else unless asked, even through PMs. 👎\n-Don't have an offensive name or avatar and keep a legible name or nickname. 👎\n")
