@@ -6,7 +6,7 @@ embed.addField("Aeris Discord!", "This guild is a help support for everyone that
 .addField("The list of \"Don't\" -s", "-Don't Text spam or COMPLETLY CONTROL THE MIC or you can get muted. 👎\n-Don't advertise servers or anything else unless asked, even through PMs. 👎\n-Don't have an offensive name or avatar and keep a legible name or nickname. 👎\n")
 .addField("Channels", "The <#280285147805384704> is where all members conversation take place. The <#285246716582559744> and <#300881899298226178> is where all bot commands go. The <#316597727691800580> is for all support question you have about the server and the bot.")
 .addField("Roles", "No asking for a mod/staff role. Even ironically asking can get you kicked.")
-.addField("Self Role", "Type \"m!agree\" in <#285246716582559744> or <#300881899298226178>  to prove you read the rules and become a supporter of the server. No spoon feeding people the rules. Your level increases by participating in chat and may be rewarded different ranks.")
+.addField("Self Role", "Type \"p!agree\" in <#285246716582559744> or <#300881899298226178>  to prove you read the rules and become a supporter of the server. No spoon feeding people the rules. Your level increases by participating in chat and may be rewarded different ranks.")
 .addField("How moderation works", "We are now working with a 2 warning system.\n1st Warning: Mute for 1 - 15 days, depends on the violation.\n2nd Warning: kicked or Banned!")
 .addField("Rule 1", "Spamming is forbidden in all channels except on <#299628878693924865>.")
 .addField("Rule 2", "Keep profanity to a minimum.")
