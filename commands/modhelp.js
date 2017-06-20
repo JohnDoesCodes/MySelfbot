@@ -10,4 +10,4 @@ exports.run = (client, message, args) => {
                 disableEveryone: true
             }
         ).then(message => message.delete(30000));
-} 
+}  
