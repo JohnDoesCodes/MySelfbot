@@ -29,7 +29,7 @@ if (message.mentions.users.size === 0) {
               attachment: buffer,
               name: 'bringBack-sendFile.png'
             }]
-          })
+          }) 
         })
       })
     }
