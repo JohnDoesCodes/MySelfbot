@@ -1,5 +1,8 @@
 const config = require('../config.json');
 module.exports = (client, message) => {
-  console.log(config)
-        client.user.setGame(`xd`)
+	 //let games = [`https://discord.io/aerisdiscord`, `https://discord.gg/dfdvArY`];
+       //setInterval(() => {
+		//   client.user.setGame(games[Math.floor(Math.random() * games.length)], 'https://twitch.tv/aeriscodes')
+        client.user.setGame(config)
+ //}, 12000)
 };
