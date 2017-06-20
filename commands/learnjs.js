@@ -12,6 +12,6 @@ exports.run = (client, message, args) => {
     message.channel.sendEmbed(
         embed, {
             disableEveryon: true
-        }
+        } 
     )
 };
