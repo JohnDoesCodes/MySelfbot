@@ -11,3 +11,4 @@ exports.run = (client, message, args) => {
             }
         ).then(message => message.delete(30000));
 }
+ 
