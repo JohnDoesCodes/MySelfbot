@@ -14,4 +14,4 @@ message.channel.sendEmbed(
                 disableEveryone: true
             }
         );
-}
+} 
