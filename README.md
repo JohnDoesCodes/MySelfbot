@@ -1,7 +1,0 @@
-"# WelcomeBot" 
-"# WelcomeBot" 
-"# WelcomeBot" 
-"# WelcomeBot" 
-"# WelcomeBot" 
-"# WelcomeBot" 
-"# WelcomeBot" 
