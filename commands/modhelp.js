@@ -7,7 +7,7 @@ exports.run = (client, message, args) => {
   .setColor("#53A6F3")
   message.channel.sendEmbed(
             embed, {
-                disableEveryone: true
+                disableEveryone: true 
             }
         ).then(message => message.delete(30000));
 }
