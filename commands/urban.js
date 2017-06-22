@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
 const unirest = require ('unirest')
-unirest.get(`https://mashape-community-urban-dictionary.p.mashape.com/define?term=${args.split('+')}`)
+unirest.get(`https://mashape-community-urban-dictionary.p.mashape.com/define?term=${args.join(' ')}`)
   .header("X-Mashape-Key", "kpkOWomvxOmshmL5UBLZYTjw7lWUp1LCls5jsnJhDLm4VjIPl6")
   .header("Accept", "text/plain")
   .end(function (result, err) {
