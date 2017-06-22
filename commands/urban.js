@@ -1,7 +1,15 @@
+module.exports = class Urban {
+  constructor(client) {
+    this.client = client;
+    this.name = "urban";
+    this.info = "Urban search.";
+    this.args = "<args>";
+  }
+
+  async run(message, args) {
 const Discord = require("discord.js");
 const unirest = require ('unirest')
-exports.run = (client, message, args) => {
-  unirest.get(`https://mashape-community-urban-dictionary.p.mashape.com/define?term=${args.join('+')}`)
+unirest.get(`https://mashape-community-urban-dictionary.p.mashape.com/define?term=${args.split('+')}`)
   .header("X-Mashape-Key", "kpkOWomvxOmshmL5UBLZYTjw7lWUp1LCls5jsnJhDLm4VjIPl6")
   .header("Accept", "text/plain")
   .end(function (result, err) {
@@ -14,5 +22,6 @@ exports.run = (client, message, args) => {
   embed.addField(`Example`, `${result.body.list[0].example}`, false)
   embed.setColor(0xffffff)
   message.channel.sendEmbed(embed)
-});
-} 
+})
+}
+}
