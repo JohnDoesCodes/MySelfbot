@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 exports.run = (client, message, args) => {
             var reason = message.content.split(' ').slice(2).join(' ');
         var user = message.mentions.users.first();
-        if (!user) return message.channel.sendMessage('Please include a user to warn.');
-        if (!reason) return message.channel.sendMessage('Please include a reason.');
+        if (!user) return message.channel.send('Please include a user to warn.');
+        if (!reason) return message.channel.send('Please include a reason.');
         var embed = new Discord.RichEmbed();
         embed.setAuthor(`Warning`, ` `)
         .setColor("#ECC31A")
@@ -15,7 +15,7 @@ exports.run = (client, message, args) => {
         user.sendEmbed(embed, {
                 disableEveryone: true
         });
-        message.channel.sendMessage(`***${user.username}*** ***Has been warned*** 👌`)
+        message.channel.send(`***${user.username}*** ***Has been warned*** 👌`)
         var embed = new Discord.RichEmbed();
         embed.setAuthor(`Moderator`, ` `)
         .setColor("#ECC31A")

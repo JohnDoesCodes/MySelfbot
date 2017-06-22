@@ -28,7 +28,7 @@ exports.run = (client, message, args) => {
                 user.sendEmbed(embed, {
                         disableEveryone: true
                 });
-                message.channel.sendMessage(`***${user.username} has been soft-banned.***`)
+                message.channel.send(`***${user.username} has been soft-banned.***`)
                 var embed = new Discord.RichEmbed();
                 embed.setAuthor(`Moderator`, ` `)
                 .setColor("#FF000A")

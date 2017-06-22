@@ -5,7 +5,7 @@ exports.run = (client, message, args) => {
 
         if (quote.length < 1) {
 
-            return message.channel.sendMessage("Please specify a message ID.");
+            return message.channel.send("Please specify a message ID.");
 
         }
 
@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
 
             const fm = messages.first();
 
-            message.channel.sendMessage("", {
+            message.channel.send("", {
 
                 embed: {
 

@@ -3,8 +3,8 @@ exports.run = (client, message, args) => {
              var user = message.mentions.users.first();
          var member = message.guild.member(user);
          var reason = message.content.split(' ').slice(2).join(' ');
-         if (!user) return message.channel.sendMessage('Please include a user to kick.');
-         if (!reason) return message.channel.sendMessage('Please include a reason.');
+         if (!user) return message.channel.send('Please include a user to kick.');
+         if (!reason) return message.channel.send('Please include a reason.');
          if (!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
             return message.channel.send("`ERROR:` I do not have permission to kick.");
         }
@@ -19,7 +19,7 @@ exports.run = (client, message, args) => {
                  user.sendEmbed(embed, {
                          disableEveryone: true
                  });
-                 message.channel.sendMessage(`***${user.username} has been kicked.***`)
+                 message.channel.send(`***${user.username} has been kicked.***`)
                  var embed = new Discord.RichEmbed();
                  embed.setAuthor(`Moderator`, ` `)
                  .setColor("#B5E02C")

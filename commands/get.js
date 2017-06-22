@@ -3,7 +3,7 @@ exports.run = (client, message, args) => {
         if (!message.guild || !message.member) return;
     var mention = message.mentions.users.first();
     if (!mention) {
-     return message.channel.sendMessage("\`❌\` | Mention a user.")
+     return message.channel.send("\`❌\` | Mention a user.")
     }
-    message.channel.sendMessage(mention.avatarURL)
+    message.channel.send(mention.avatarURL)
 };

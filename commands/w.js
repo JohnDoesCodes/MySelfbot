@@ -3,7 +3,7 @@ exports.run = (client, message, args) => {
   message.delete()
  var mention = message.mentions.users.first();
  if(message.mentions.users.size === 0) {
-return message.channel.sendMessage("\`?\` | Please mention a user.")
+return message.channel.send("\`?\` | Please mention a user.")
  }
   var embed = new Discord.RichEmbed();
   var moment = require('moment')
