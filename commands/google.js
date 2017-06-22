@@ -1,13 +1,5 @@
-module.exports = class Google {
-  constructor(client) {
-    this.client = client;
-    this.name = "google";
-    this.info = "Google stuff.";
-    this.args = "";
-  }
-
-async run(message) {
 const Discord = require("discord.js");
+exports.run = (client, message, args) => {
 var request = require('request');
 const args = message.content.split(' ').slice(1).join(' ');
 let res = message.channel.send(`:mag: \`${args}\`...`);
@@ -24,4 +16,3 @@ let res = message.channel.send(`:mag: \`${args}\`...`);
           }
       });
   }
-}
