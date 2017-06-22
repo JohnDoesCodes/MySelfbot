@@ -1,5 +1,5 @@
 const Discord = require("discord.js");
-exports.run = (client, message, args) => {
+exports.run = (client, message) => {
 var request = require('request');
 const args = message.content.split(' ').slice(1).join(' ');
 let res = message.channel.send(`:mag: \`${args}\`...`);
