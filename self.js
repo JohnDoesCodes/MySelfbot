@@ -11,12 +11,12 @@ require('./util/eventLoader')(client);
 ////////////////////////////////////////////
 //                                        //
 //                                        //
-//       Selfbot made by: aeris#9897      //
-//                                        //               
+//       Selfbot made by: aeris#0018      //
+//                                        //
 //                                        //
 //                                        //
 ////////////////////////////////////////////
- 
+
 process.on('uncaughtException', function(err) {
     console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE BOT FROM CRASHING
 });
