@@ -10,5 +10,5 @@ message.channel.sendEmbed(
             embed, {
                 disableEveryone: true
             }
-        ); 
+        );
 }
