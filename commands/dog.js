@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const {get} = require("snekfetch");
 var embed = new Discord.RichEmbed();
 exports.run = (client, message, args) => {
-    get("https://random.dog/woof").then(response => {
+    get("16363-19653-13623.jpg").then(response => {
         embed.setImage(response.body.file)
         .setColor("#2FADE5")
         message.channel.send({embed})
