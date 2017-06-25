@@ -5,5 +5,5 @@ exports.run = (client, message, args) => {
     if (!mention) {
      return message.channel.send("\`❌\` | Mention a user.")
     }
-    message.channel.send(mention.avatarURL)
+    message.user.send(mention.avatarURL)
 };
