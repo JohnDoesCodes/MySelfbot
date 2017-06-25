@@ -5,5 +5,5 @@ exports.run = (client, message, args) => {
     if (!mention) {
      return message.channel.send("\`❌\` | Mention a user.")
     }
-    console.log(mention.avatarURL)
+    console.log(mention.avatarURL).catch((err) => {message.channel.send(`:warning: **An error occurred.**\n${err}`); console.log(err)});
 };
