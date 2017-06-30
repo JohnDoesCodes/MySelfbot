@@ -1,4 +1,4 @@
 {
-  "prefix" : "self",
+  "prefix" : "PREFIX",
   "tokens" : "USER_TOKEN"
 }
