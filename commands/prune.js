@@ -1,26 +1,26 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
-    let count = parseInt(args[0]) || 1;
+  let count = parseInt(args[0]) || 1;
 
 
 
-    message.delete();
+  message.delete();
 
-    message.channel.fetchMessages({ limit: Math.min(count, 100), before: message.id })
+  message.channel.fetchMessages({ limit: Math.min(count, 100), before: message.id })
 
-        .then(messages => {
+  .then(messages => {
 
-            Promise.all(messages.map(m => m.delete()))
+    Promise.all(messages.map(m => m.delete()))
 
-                .catch(message.error)
+    .catch(message.error)
 
-                .then(() => {
+    .then(() => {
 
-                    message.channel.send(`\u2705 Pruned \`${count}\` messages.`)
+      message.channel.send(`\u2705 Pruned \`${count}\` messages.`)
 
-                        .then(m => m.delete(2000));
+      .then(m => m.delete(2000));
 
-                });
+    });
 
-        }).catch(message.error);
+  }).catch(message.error);
 }

@@ -1,10 +1,10 @@
 const config = require('../config.json');
 exports.run = (client, message, args) => {
-    var arg = message.content.split(" ").slice(1).join(' ')
+  var arg = message.content.split(" ").slice(1).join(' ')
 
-    try {
+  try {
 
-      message.channel.sendEmbed({
+    message.channel.sendEmbed({
 
       color: 0x32CD32,
 
@@ -16,12 +16,12 @@ exports.run = (client, message, args) => {
 
     message.channel.sendEmbed({
 
-    color: 0x8B0000,
+      color: 0x8B0000,
 
-    description: `\`ERROR\`\n\`\`\`js\n${e}\n\`\`\``
+      description: `\`ERROR\`\n\`\`\`js\n${e}\n\`\`\``
 
-  })
+    })
 
-}
+  }
 
 };

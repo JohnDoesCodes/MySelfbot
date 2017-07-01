@@ -1,43 +1,43 @@
 exports.run = (client, message, args) => {
-            var quote = message.content.split(" ").slice(1).join(" ");
+  var quote = message.content.split(" ").slice(1).join(" ");
 
-        message.delete();
+  message.delete();
 
-        if (quote.length < 1) {
+  if (quote.length < 1) {
 
-            return message.channel.send("Please specify a message ID.");
+    return message.channel.send("Please specify a message ID.");
 
-        }
+  }
 
-        message.channel.fetchMessages({
+  message.channel.fetchMessages({
 
-            limit: 1,
+    limit: 1,
 
-            around: quote
+    around: quote
 
-        }).then(messages => {
+  }).then(messages => {
 
-            const fm = messages.first();
+    const fm = messages.first();
 
-            message.channel.send("", {
+    message.channel.send("", {
 
-                embed: {
+      embed: {
 
-                    color: 0x3cb8c9,
+        color: 0x3cb8c9,
 
-                    author: {
+        author: {
 
-                        name: `${fm.author.tag}`,
+          name: `${fm.author.tag}`,
 
-                        icon_url: fm.author.avatarURL
+          icon_url: fm.author.avatarURL
 
-                    },
+        },
 
-                    description: fm.content
+        description: fm.content
 
-                }
+      }
 
-            });
+    });
 
-        });
+  });
 };

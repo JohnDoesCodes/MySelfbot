@@ -18,30 +18,30 @@ require('./util/eventLoader')(client);
 ////////////////////////////////////////////
 
 process.on('uncaughtException', function(err) {
-    console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE BOT FROM CRASHING
+  console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE BOT FROM CRASHING
 });
 
 function AaN(args, i) {
-    if (args[i] === null || args[i] === "" || args[i] === undefined) return true;
-    return false;
+  if (args[i] === null || args[i] === "" || args[i] === undefined) return true;
+  return false;
 }
 
 const log = message => {
-    console.log("I\'m ready asf!");
+  console.log("I\'m ready asf!");
 };
 
 var reload = (message, cmd) => {
-	delete require.cache[require.resolve('./commands/' + cmd)];
-	try {
-		let cmdFile = require('./commands/' + cmd);
-	} catch (err) {
-		message.channel.send(`Problem loading ${cmd}: ${err}`).then(
-			response => response.delete(1000).catch(error => console.log(error.stack))
-		).catch(error => console.log(error.stack));
-	}
-	message.channel.send(`${cmd} reload was a success!`).then(
-		response => response.delete(1000).catch(error => console.log(error.stack))
-	).catch(error => console.log(error.stack));
+  delete require.cache[require.resolve('./commands/' + cmd)];
+  try {
+    let cmdFile = require('./commands/' + cmd);
+  } catch (err) {
+    message.channel.send(`Problem loading ${cmd}: ${err}`).then(
+      response => response.delete(1000).catch(error => console.log(error.stack))
+    ).catch(error => console.log(error.stack));
+  }
+  message.channel.send(`${cmd} reload was a success!`).then(
+    response => response.delete(1000).catch(error => console.log(error.stack))
+  ).catch(error => console.log(error.stack));
 };
 exports.reload = reload;
 
