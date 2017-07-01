@@ -4,7 +4,6 @@ exports.run = (client, message, args) => {
         var modlog = message.guild.channels.find('name', 'mod-log')
         var user = message.mentions.users.first();
         if (!user) return message.channel.send('Please include a user to warn.');
-        if (!reason) return message.channel.send('Please include a reason.');
         var embed = new Discord.RichEmbed();
         embed.setAuthor('Selfbot | Warn', client.user.avatarURL)
         .addField("User:", `${user.tag}`, true)
