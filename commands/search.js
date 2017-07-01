@@ -1,32 +1,32 @@
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
-    if (args.length < 1)
+  if (args.length < 1)
 
-        throw 'You must specify what to search for!';
-
-
-
-    let query = args.join(' ');
+  throw 'You must specify what to search for!';
 
 
 
-    message.edit(`\u{1f504} Searching the last \`100\` messages for \`${query}\``).then(m => {
+  let query = args.join(' ');
 
-        message.channel.fetchMessages({ limit: 100, before: message.id }).then(messages => {
 
-            let results = messages.filter(it => it.content.toLowerCase().indexOf(query.toLowerCase()) != -1);
 
-            let output = results
+  message.edit(`\u{1f504} Searching the last \`100\` messages for \`${query}\``).then(m => {
 
-                .map(it => `${formatDate(it.createdAt)} ${it.author.username}: ${it.content}`)
+    message.channel.fetchMessages({ limit: 100, before: message.id }).then(messages => {
 
-                .join('\n');
+      let results = messages.filter(it => it.content.toLowerCase().indexOf(query.toLowerCase()) != -1);
 
-            m.editCode('log', output);
+      let output = results
 
-        }).catch(message.error);
+      .map(it => `${formatDate(it.createdAt)} ${it.author.username}: ${it.content}`)
 
-    });
+      .join('\n');
+
+      m.editCode('log', output);
+
+    }).catch(message.error);
+
+  });
 
 };
 
@@ -34,7 +34,7 @@ exports.run = (client, message, args) => {
 
 const formatDate = (date) => {
 
-    return `[${_(date.getDay())}/${_(date.getMonth())}/${_(date.getYear() - 100)}] [${_(date.getHours())}:${_(date.getMinutes())}:${_(date.getSeconds())}]`;
+  return `[${_(date.getDay())}/${_(date.getMonth())}/${_(date.getYear() - 100)}] [${_(date.getHours())}:${_(date.getMinutes())}:${_(date.getSeconds())}]`;
 
 };
 
@@ -42,5 +42,5 @@ const formatDate = (date) => {
 
 const _ = (number) => {
 
-    return number < 10 ? '0' + number : '' + number;
+  return number < 10 ? '0' + number : '' + number;
 }
