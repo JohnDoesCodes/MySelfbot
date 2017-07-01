@@ -3,7 +3,7 @@ let embed = new Discord.RichEmbed();
 exports.run = (client, message) => {
 message.delete();
 let args = message.content.split(' ').splice(1).join(' ');
-const res = self.users.filter(u => u.discriminator === `${args}`).map(u => u.username);
+const res = client.users.filter(u => u.discriminator === `${args}`).map(u => u.username);
   if(res.length === 0) {
 embed.setDescription(`No users found with ${args}`)
 .setColor(0xFF0ed4)
