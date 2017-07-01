@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 let embed = new Discord.RichEmbed();
-exports.run = (client, message, args) => {
+exports.run = (client, message) => {
 message.delete();
 let args = message.content.split(' ').splice(1).join(' ');
 const res = self.users.filter(u => u.discriminator === `${args}`).map(u => u.username);
