@@ -10,7 +10,7 @@ embed.setDescription(`No users found with ${args}`)
 .setTimestamp();
   message.channel.send({ embed })
   } else {
-.setDescription(`**Users Found With ${args}**\n${res.join('\n')}`)
+embed.setDescription(`**Users Found With ${args}**\n${res.join('\n')}`)
 .setColor("#53A6F3")
 .setTimestamp();
 message.channel.send({ embed })
