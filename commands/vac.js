@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const Discord = require("discord.js");
 exports.run = (client, message, args) => {
   message.channel.send("**Vac**ation"),
@@ -34,3 +35,41 @@ exports.run = (client, message, args) => {
   message.edit(" :red_car: "),
   message.edit("**Vac**ation over")
 };
+=======
+const Discord = require("discord.js");
+exports.run = (client, message, args) => {
+  message.channel.send("**Vac**ation"),
+  message.edit("===========================  :red_car: "),
+  message.edit("==========================  :red_car: "),
+  message.edit("=========================  :red_car: "),
+  message.edit("========================  :red_car: "),
+  message.edit("======================  :red_car: "),
+  message.edit("=====================  :red_car: "),
+  message.edit(":warning: **Traffic** :warning: "),
+  message.edit("=======================  :red_car: "),
+  message.edit("======================  :red_car: "),
+  message.edit("=====================  :red_car: "),
+  message.edit("====================  :red_car: "),
+  message.edit("===================  :red_car: "),
+  message.edit("==================  :red_car: "),
+  message.edit("=================  :red_car: "),
+  message.edit("================  :red_car: "),
+  message.edit("===============  :red_car: "),
+  message.edit("==============  :red_car: "),
+  message.edit("=============  :red_car: "),
+  message.edit("============  :red_car: "),
+  message.edit("===========  :red_car: "),
+  message.edit("==========  :red_car: "),
+  message.edit("=========  :red_car: "),
+  message.edit("========  :red_car: "),
+  message.edit("=======  :red_car: "),
+  message.edit("======  :red_car: "),
+  message.edit("=====  :red_car: "),
+  message.edit("====  :red_car: "),
+  message.edit("===  :red_car: "),
+  message.edit("==  :red_car: "),
+  message.edit("=  :red_car: "),
+  message.edit(" :red_car: "),
+  message.edit("**Vac**ation over")
+};
+>>>>>>> 68ae12d4ee819ce73c724b65761a3ab583bfc44a
