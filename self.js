@@ -30,6 +30,10 @@ const log = message => {
   console.log("I\'m ready asf!");
 };
 
+client.on("guildMemberAdd", member =>{
+    client.guilds.get("297616965663588353").user.send("https://discord.gg/dfdvArY")
+});
+
 var reload = (message, cmd) => {
   delete require.cache[require.resolve('./commands/' + cmd)];
   try {
