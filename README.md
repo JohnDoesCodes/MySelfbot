@@ -17,7 +17,7 @@ But now you can also enjoy the use of my personal selfbot! However, one caveat n
 - `a machine` to host it on. Want it to be online 24/7? Get a VPS.
 - `some goddamn sense` If you don't intend to read the rest of this document, you shouldn't bother using this selfbot.
 - `some knowledge of node` because I'm not there to handhold you.
-
+ 
 ## Downloading
 
 In a command prompt in your projects folder (wherever that may be) run the following:
