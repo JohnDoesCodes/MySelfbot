@@ -8,12 +8,12 @@ exports.run = (client, message) => {
     embed.setAuthor(`No users found with ${args}`)
     .setColor("#53A6F3")
     .setTimestamp();
-    message.channel.send({ embed })
+    message.channel.send({ embed });
   } else {
     embed.setAuthor(`Users Found With ${args}`)
     .setDescription(`${res.join('\n')}`)
     .setColor("#53A6F3")
     .setTimestamp();
-    message.channel.send({ embed })
+    message.channel.send({ embed });
   }
 }
