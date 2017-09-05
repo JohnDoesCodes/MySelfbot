@@ -1,11 +1,11 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-const config = require('./config.json');
+const config = require("./config.json");
 // var randomcolor = require('randomcolor')
-var moment = require('moment')
-const fs = require('fs');
-var winston = require('winston')
-require('./util/eventLoader')(client);
+var moment = require("moment");
+const fs = require("fs");
+var winston = require("winston");
+require("./util/eventLoader")(client);
 
 
 ////////////////////////////////////////////
@@ -17,8 +17,8 @@ require('./util/eventLoader')(client);
 //                                        //
 ////////////////////////////////////////////
 
-process.on('uncaughtException', function(err) {
-  console.log('DUD I CAUGHT EXCEPTION?!??!: ' + err); //STOPS THE BOT FROM CRASHING
+process.on("uncaughtException", function(err) {
+  console.log("DUD I CAUGHT EXCEPTION" + err); //STOPS THE BOT FROM CRASHING
 });
 
 function AaN(args, i) {
@@ -31,11 +31,11 @@ const log = message => {
 };
 
 client.on("guildMemberAdd", member =>{
-    client.guilds.get("297616965663588353").user.send("https://discord.gg/dfdvArY")
+    client.guilds.get("297616965663588353").user.send("https://discord.gg/dfdvArY");
 });
 
 var reload = (message, cmd) => {
-  delete require.cache[require.resolve('./commands/' + cmd)];
+  delete require.cache[require.resolve("./commands/" + cmd)];
   try {
     let cmdFile = require('./commands/' + cmd);
   } catch (err) {
