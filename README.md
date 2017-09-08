@@ -4,7 +4,7 @@
 #### *admin, fun commands and much more!*
 [<img src="https://img.shields.io/badge/discord-js-green.svg">](http://github.com/JohnDoesCodes) [<img src="https://discordapp.com/api/guilds/280285147805384704/widget.png?style=shield">](https://discord.gg/dfdvArY)
 
-[Installation is easy](https://discord.gg/dfdvArY), and you do NOT need to know anything about coding! Aside from installation and updating, every part of the bot can be controlled from within Discord.
+[Installation is easy](https://discord.gg/RwgC6uS), and you do NOT need to know anything about coding! Aside from installation and updating, every part of the bot can be controlled from within Discord.
 
 But now you can also enjoy the use of my personal selfbot! However, one caveat needs to be established:
 
